@@ -7,6 +7,7 @@
       "adoption": "Adoção",
       "help": "Como ajudar",
       "stories": "Histórias felizes",
+      "process": "Como funciona",
       "faq": "FAQ",
       "contact": "Contato"
     },
@@ -110,6 +111,30 @@
     "btn_adopt": "Quero adotar",
     "btn_help": "Quero ajudar"
   },
+  "stories": {
+    "title": "Histórias felizes",
+    "subtitle": "Cada adoção é um recomeço. Aqui celebramos encontros que viraram família.",
+    "items": [
+      {
+        "quote": "Estava com medo de adotar porque nunca tinha tido um cachorro. A equipe da ONG Patinhas me ajudou a entender o que esperar e o Bolinho chegou em casa como se sempre tivesse sido nosso. Hoje ele é a alegria da família.",
+        "name": "Mariana S.",
+        "pet": "adotou o Bolinho",
+        "icon": "🐶"
+      },
+      {
+        "quote": "A Mel chegou assustada, se escondia embaixo da cama. Três meses depois ela já ronrona no meu colo. Ver essa transformação foi um presente que não esperava.",
+        "name": "Carlos R.",
+        "pet": "adotou a Mel",
+        "icon": "🐱"
+      },
+      {
+        "quote": "Adotei o Pipoca para minha mãe, que morava sozinha. Ele chegou e encheu a casa de vida. Ela me liga todo dia para me contar o que ele aprontou. Foi a melhor decisão que tomei.",
+        "name": "Fernanda L.",
+        "pet": "adotou o Pipoca",
+        "icon": "🐕‍🦺"
+      }
+    ]
+  },
   "faq": {
     "title": "Perguntas frequentes",
     "items": [
@@ -158,8 +183,10 @@
     "slogan": "Toda patinha merece um lar",
     "quick_links": "Links rápidos",
     "contact_title": "Contato",
-    "city": "Lagoa Santa, MG",
-    "made_with": "Feito com carinho para ajudar mais patinhas a encontrarem um lar. 🐾"
+    "location": "Lagoa Santa, MG",
+    "cnpj": "CNPJ: 64.944.050/0001-00",
+    "made_with": "Feito com carinho para ajudar mais patinhas a encontrarem um lar. 🐾",
+    "whatsapp_message": "Olá! Gostaria de saber mais sobre a ONG Patinhas para Adoção."
   },
   "status": {
     "available": "Disponível para adoção"

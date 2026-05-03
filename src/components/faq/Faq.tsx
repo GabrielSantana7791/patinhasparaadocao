@@ -21,7 +21,7 @@ const Faq = () => {
       <div style={styles.container}>
         <div style={styles.header}>
           <h2 style={styles.title} id="faq-title">
-            {t("title")}
+            {t("faq.title")}
           </h2>
         </div>
 

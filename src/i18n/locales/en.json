@@ -7,6 +7,7 @@
       "adoption": "Adoption",
       "help": "How to help",
       "stories": "Happy stories",
+      "process": "How it works",
       "faq": "FAQ",
       "contact": "Contact"
     },
@@ -110,6 +111,30 @@
     "btn_adopt": "I want to adopt",
     "btn_help": "I want to help"
   },
+  "stories": {
+    "title": "Happy stories",
+    "subtitle": "Every adoption is a new beginning. Here we celebrate matches that became family.",
+    "items": [
+      {
+        "quote": "I was afraid to adopt because I had never had a dog. The Paws NGO team helped me understand what to expect and Bolinho arrived home as if he had always been ours. Today he is the joy of the family.",
+        "name": "Mariana S.",
+        "pet": "adopted Bolinho",
+        "icon": "🐶"
+      },
+      {
+        "quote": "Mel arrived scared, hiding under the bed. Three months later she is already purring in my lap. Seeing this transformation was a gift I didn't expect.",
+        "name": "Carlos R.",
+        "pet": "adopted Mel",
+        "icon": "🐱"
+      },
+      {
+        "quote": "I adopted Pipoca for my mother, who lived alone. He arrived and filled the house with life. She calls me every day to tell me what he's been up to. It was the best decision I've made.",
+        "name": "Fernanda L.",
+        "pet": "adopted Pipoca",
+        "icon": "🐕‍🦺"
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "items": [
@@ -158,8 +183,10 @@
     "slogan": "Every paw deserves a home",
     "quick_links": "Quick links",
     "contact_title": "Contact",
-    "city": "Lagoa Santa, MG",
-    "made_with": "Made with love to help more paws find a home. 🐾"
+    "location": "Lagoa Santa, MG",
+    "cnpj": "Tax ID (CNPJ): 64.944.050/0001-00",
+    "made_with": "Made with love to help more paws find a home. 🐾",
+    "whatsapp_message": "Hello! I would like to know more about the Paws for Adoption NGO."
   },
   "status": {
     "available": "available for adoption"

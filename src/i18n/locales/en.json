@@ -1,0 +1,154 @@
+{
+  "header": {
+    "logo": "Paws for Adoption",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "adoption": "Adoption",
+      "help": "How to help",
+      "stories": "Happy stories",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "cta": "I want to adopt"
+  },
+  "hero": {
+    "badge": "Responsible adoption in BH and Region",
+    "title": "Every paw deserves a home full of love",
+    "text": "The NGO Paws for Adoption connects rescued dogs and cats to responsible families, creating new stories of care, affection, and new beginnings.",
+    "cta_primary": "See animals for adoption",
+    "cta_secondary": "I want to help",
+    "stats": {
+      "adoption": "Responsible adoption",
+      "love": "Care with love",
+      "new_beginnings": "New beginnings"
+    }
+  },
+  "about": {
+    "title": "About the NGO Paws for Adoption",
+    "subtitle": "The NGO Paws for Adoption was born to transform abandonment into hope. Our work is to welcome animals in vulnerable situations, promote essential care, and find families prepared to offer love, security, and commitment.",
+    "rescue": {
+      "title": "Rescue",
+      "text": "We welcome dogs and cats in situations of abandonment, risk, or vulnerability."
+    },
+    "care": {
+      "title": "Care",
+      "text": "We aim to offer food, protection, affection, and essential care until adoption."
+    },
+    "adoption": {
+      "title": "Responsible Adoption",
+      "text": "We connect each animal with conscious, prepared, and committed families."
+    }
+  },
+  "adoption": {
+    "title": "Animals waiting for a home",
+    "subtitle": "Meet some paws that are ready for a new story.",
+    "interest_btn": "🐾 I'm interested"
+  },
+  "process": {
+    "title": "How adoption works",
+    "subtitle": "Adoption is a gesture of love, but also responsibility. Therefore, we follow some steps to ensure the best for each animal.",
+    "steps": [
+      {
+        "title": "You meet the available animals",
+        "text": "See the pets waiting for a family and choose the one you connect with."
+      },
+      {
+        "title": "We talk about your routine",
+        "text": "We understand your space, routine, experience, and expectations."
+      },
+      {
+        "title": "We evaluate the match",
+        "text": "We seek to ensure the chosen pet matches your family and lifestyle."
+      },
+      {
+        "title": "We follow the adaptation",
+        "text": "We stay close in the first moments to support this new beginning."
+      }
+    ]
+  },
+  "help": {
+    "title": "How you can help",
+    "subtitle": "Not everyone can adopt, but everyone can help in some way.",
+    "btn": "I want to help",
+    "methods": [
+      {
+        "title": "Donate food or care items",
+        "description": "Your donation helps with the daily care of the sheltered animals.",
+        "message": "Hello! I would like to know how I can donate food or care items to the Paws for Adoption NGO."
+      },
+      {
+        "title": "Sponsor an animal",
+        "description": "Contribute monthly with food, vaccines, exams, or treatments.",
+        "message": "Hello! I am interested in sponsoring an animal from the Paws for Adoption NGO. How does it work?"
+      },
+      {
+        "title": "Be a temporary home",
+        "description": "Offer shelter and affection while the pet waits for definitive adoption.",
+        "message": "Hello! I would like to be a temporary home for an animal from the Paws for Adoption NGO. How can I help?"
+      },
+      {
+        "title": "Spread the word about the animals",
+        "description": "Sharing also saves lives and helps each pet find a family.",
+        "message": "Hello! I want to help by spreading the word about the animals from the Paws for Adoption NGO. How can I do this best?"
+      },
+      {
+        "title": "Be a volunteer",
+        "description": "Help at fairs, transport, photos, social media, or care.",
+        "message": "Hello! I am interested in being a volunteer at the Paws for Adoption NGO. How can I contribute?"
+      },
+      {
+        "title": "Contribute to veterinary costs",
+        "description": "Treatments, consultations, and emergencies are an important part of the rescue.",
+        "message": "Hello! I would like to contribute to veterinary costs for the animals from the Paws for Adoption NGO."
+      }
+    ]
+  },
+  "cta_banner": {
+    "title": "You can change a life today",
+    "text": "Adopting, donating, sponsoring, offering a temporary home, or spreading the word are real ways to transform an animal's future.",
+    "btn_adopt": "I want to adopt",
+    "btn_help": "I want to help"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions"
+  },
+  "contact": {
+    "title": "Talk to us",
+    "subtitle": "Do you want to adopt, help, or learn more about our work?",
+    "text": "Get in touch with us. We will love to talk to you and show you ways to transform a paw's life.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "Email",
+    "location": "Location",
+    "location_value": "Lagoa Santa, MG",
+    "attendance": "Service",
+    "attendance_value": "Via WhatsApp and Instagram",
+    "cnpj": "Tax ID (CNPJ)",
+    "cnpj_value": "64.944.050/0001-00 | MINAS GERAIS INSTITUTE FOR ANIMAL PROTECTION AND CARE"
+  },
+  "footer": {
+    "logo": "Paws for Adoption",
+    "slogan": "Every paw deserves a home",
+    "quick_links": "Quick links",
+    "contact_title": "Contact",
+    "city": "Lagoa Santa, MG",
+    "made_with": "Made with love to help more paws find a home. 🐾"
+  },
+  "status": {
+    "available": "available for adoption"
+  },
+  "specie": {
+    "dog": "Dog",
+    "cat": "Cat"
+  },
+  "gender": {
+    "male": "Male",
+    "female": "Female"
+  },
+  "size": {
+    "small": "Small size",
+    "medium": "Medium size",
+    "big": "Big size"
+  }
+}

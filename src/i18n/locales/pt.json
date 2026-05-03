@@ -1,0 +1,154 @@
+{
+  "header": {
+    "logo": "Patinhas para Adoção",
+    "nav": {
+      "home": "Início",
+      "about": "Sobre",
+      "adoption": "Adoção",
+      "help": "Como ajudar",
+      "stories": "Histórias felizes",
+      "faq": "FAQ",
+      "contact": "Contato"
+    },
+    "cta": "Quero adotar"
+  },
+  "hero": {
+    "badge": "Adoção responsável em BH e Região",
+    "title": "Toda patinha merece um lar cheio de amor",
+    "text": "A ONG Patinhas para Adoção conecta cães e gatos resgatados a famílias responsáveis, criando novas histórias de cuidado, afeto e recomeço.",
+    "cta_primary": "Ver animais para adoção",
+    "cta_secondary": "Quero ajudar",
+    "stats": {
+      "adoption": "Adoção responsável",
+      "love": "Cuidado com amor",
+      "new_beginnings": "Novos recomeços"
+    }
+  },
+  "about": {
+    "title": "Sobre a ONG Patinhas para Adoção",
+    "subtitle": "A ONG Patinhas para Adoção nasceu para transformar abandono em esperança. Nosso trabalho é acolher animais em situação de vulnerabilidade, promover cuidados essenciais e encontrar famílias preparadas para oferecer amor, segurança e compromisso.",
+    "rescue": {
+      "title": "Resgate",
+      "text": "Acolhemos cães e gatos em situação de abandono, risco ou vulnerabilidade."
+    },
+    "care": {
+      "title": "Cuidado",
+      "text": "Buscamos oferecer alimentação, proteção, carinho e cuidados essenciais até a adoção."
+    },
+    "adoption": {
+      "title": "Adoção responsável",
+      "text": "Conectamos cada animal a famílias conscientes, preparadas e comprometidas."
+    }
+  },
+  "adoption": {
+    "title": "Animais esperando por um lar",
+    "subtitle": "Conheça algumas patinhas que estão prontas para ganhar uma nova história.",
+    "interest_btn": "🐾 Tenho interesse"
+  },
+  "process": {
+    "title": "Como funciona a adoção",
+    "subtitle": "A adoção é um gesto de amor, mas também de responsabilidade. Por isso, seguimos alguns passos para garantir o melhor para cada animal.",
+    "steps": [
+      {
+        "title": "Você conhece os animais disponíveis",
+        "text": "Veja os pets que estão aguardando uma família e escolha aquele com quem você se conecta."
+      },
+      {
+        "title": "Conversamos sobre sua rotina",
+        "text": "Entendemos seu espaço, sua rotina, sua experiência e suas expectativas."
+      },
+      {
+        "title": "Avaliamos a combinação",
+        "text": "Buscamos garantir que o pet escolhido combine com sua família e estilo de vida."
+      },
+      {
+        "title": "Acompanhamos a adaptação",
+        "text": "Seguimos por perto nos primeiros momentos para apoiar esse novo começo."
+      }
+    ]
+  },
+  "help": {
+    "title": "Como você pode ajudar",
+    "subtitle": "Nem todo mundo pode adotar, mas todo mundo pode ajudar de alguma forma.",
+    "btn": "Quero ajudar",
+    "methods": [
+      {
+        "title": "Doar ração ou itens de cuidado",
+        "description": "Sua doação ajuda nos cuidados diários com os animais acolhidos.",
+        "message": "Olá! Gostaria de saber como posso fazer uma doação de ração ou itens de cuidado para a ONG Patinhas para Adoção."
+      },
+      {
+        "title": "Apadrinhar um animal",
+        "description": "Contribua mensalmente com alimentação, vacinas, exames ou tratamentos.",
+        "message": "Olá! Tenho interesse em apadrinhar um animal da ONG Patinhas para Adoção. Como funciona?"
+      },
+      {
+        "title": "Ser lar temporário",
+        "description": "Ofereça abrigo e carinho enquanto o pet espera pela adoção definitiva.",
+        "message": "Olá! Gostaria de ser lar temporário para um animal da ONG Patinhas para Adoção. Como posso ajudar?"
+      },
+      {
+        "title": "Divulgar os animais",
+        "description": "Compartilhar também salva vidas e ajuda cada pet a encontrar uma família.",
+        "message": "Olá! Quero ajudar divulgando os animais da ONG Patinhas para Adoção. Como posso fazer isso da melhor forma?"
+      },
+      {
+        "title": "Ser voluntário",
+        "description": "Ajude em feiras, transporte, fotos, redes sociais ou cuidados.",
+        "message": "Olá! Tenho interesse em ser voluntário na ONG Patinhas para Adoção. Como posso contribuir?"
+      },
+      {
+        "title": "Contribuir com custos veterinários",
+        "description": "Tratamentos, consultas e emergências são parte importante do resgate.",
+        "message": "Olá! Gostaria de contribuir com custos veterinários para os animais da ONG Patinhas para Adoção."
+      }
+    ]
+  },
+  "cta_banner": {
+    "title": "Você pode mudar uma vida hoje",
+    "text": "Adotar, doar, apadrinhar, oferecer lar temporário ou divulgar são formas reais de transformar o futuro de um animal.",
+    "btn_adopt": "Quero adotar",
+    "btn_help": "Quero ajudar"
+  },
+  "faq": {
+    "title": "Perguntas frequentes"
+  },
+  "contact": {
+    "title": "Fale com a gente",
+    "subtitle": "Quer adotar, ajudar ou saber mais sobre nosso trabalho?",
+    "text": "Entre em contato com a gente. Vamos adorar conversar com você e apresentar formas de transformar a vida de uma patinha.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "E-mail",
+    "location": "Localização",
+    "location_value": "Lagoa Santa, MG",
+    "attendance": "Atendimento",
+    "attendance_value": "Via WhatsApp e Instagram",
+    "cnpj": "CNPJ",
+    "cnpj_value": "64.944.050/0001-00 | INSTITUTO MINEIRO DE PROTEÇÃO E CUIDADO ANIMAL"
+  },
+  "footer": {
+    "logo": "Patinhas para Adoção",
+    "slogan": "Toda patinha merece um lar",
+    "quick_links": "Links rápidos",
+    "contact_title": "Contato",
+    "city": "Lagoa Santa, MG",
+    "made_with": "Feito com carinho para ajudar mais patinhas a encontrarem um lar. 🐾"
+  },
+  "status": {
+    "available": "Disponível para adoção"
+  },
+  "specie": {
+    "dog": "Cachorro",
+    "cat": "Gato"
+  },
+  "gender": {
+    "male": "Macho",
+    "female": "Fêmea"
+  },
+  "size": {
+    "small": "Porte pequeno",
+    "medium": "Porte médio",
+    "big": "Porte grande"
+  }
+}

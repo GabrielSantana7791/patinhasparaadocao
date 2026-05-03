@@ -1,0 +1,135 @@
+export const styles = {
+  section: {
+    paddingBlock: "4.5rem",
+  },
+  container: {
+    width: "100%",
+    maxWidth: "1200px",
+    marginInline: "auto",
+    paddingInline: "1.25rem",
+  },
+  sectionHeader: {
+    textAlign: "center" as const,
+    marginBottom: "3.25rem",
+  },
+  sectionTitle: {
+    fontFamily: "Nunito, sans-serif",
+    fontSize: "clamp(1.6rem, 4vw, 2.4rem)",
+    fontWeight: 800,
+    color: "#4A3A3F",
+    marginBottom: "1rem",
+    lineHeight: 1.25,
+  },
+  sectionSubtitle: {
+    fontSize: "clamp(0.95rem, 2vw, 1.1rem)",
+    color: "#6B5960",
+    maxWdith: "680px",
+    marginInline: "auto",
+    lineHeight: 1.75,
+  },
+  sectionText: {
+    fontSize: "1rem",
+    color: "#6B5960",
+    maxWidth: "600px",
+    marginInline: "auto",
+    marginTop: "0.75rem",
+  },
+  ctaSection: {
+    paddingBlock: "4.5rem",
+    backgroundImage:
+      "linear-gradient(to bottom right, #B14F73, #C85B52, #F0A329)",
+  },
+  ctaContent: {
+    textAlign: "center" as const,
+    maxWidth: "700px",
+    marginInline: "auto",
+  },
+  ctaActions: {
+    display: "flex",
+    flexWrap: "wrap" as const,
+    gap: "0.875rem",
+    justifyContent: "center",
+    marginTop: "2rem",
+  },
+  btn: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "0.5rem",
+    padding: "0.8rem 1.75rem",
+    borderRadius: "9999px",
+    fontFamily: "Nunito, sans-serif",
+    fontSize: "0.95rem",
+    fontWeight: 700,
+    transition: "all 0.25s ease",
+    cursor: "pointer",
+    textDecoration: "none",
+  },
+  btnWhite: (isHovered: boolean) => ({
+    backgroundColor: "#FFFFFF",
+    color: "#B14F73",
+    transform: isHovered ? "translateY(-2px)" : "none",
+    boxShadow: isHovered ? "0 4px 20px rgba(74, 58, 63, 0.12)" : "none",
+  }),
+  btnWhiteOutline: (isHovered: boolean) => ({
+    backgroundColor: isHovered ? "rgba(255, 255, 255, 0.15)" : "transparent",
+    color: "#FFFFFF",
+    border: "2px solid rgba(255, 255, 255, 0.7)",
+    transform: isHovered ? "translateY(-2px)" : "none",
+  }),
+  contactActions: {
+    display: "flex",
+    flexWrap: "wrap" as const,
+    gap: "1rem",
+    justifyContent: "center",
+    marginBottom: "3rem",
+  },
+  contactBtn: (isHovered: boolean, type: "wa" | "ig" | "mail") => {
+    const bg = {
+      wa: "#25d366",
+      ig: "linear-gradient(135deg, #f09433 0%, #dc2743 50%, #bc1888 100%)",
+      mail: "#B14F73",
+    };
+    return {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "0.625rem",
+      padding: "1rem 2rem",
+      borderRadius: "999px",
+      fontFamily: "Nunito, sans-serif",
+      fontSize: "1rem",
+      fontWeight: 700,
+      color: "#FFFFFF",
+      background: bg[type],
+      textDecoration: "none",
+      boxShadow: "0 2px 8px rgba(74, 58, 63, 0.12)",
+      transition: "all 0.25s ease",
+      transform: isHovered ? "translateY(-3px)" : "none",
+    };
+  },
+  contactInfo: {
+    maxWidth: "500px",
+    marginInline: "auto",
+  },
+  contactDetails: {
+    display: "grid",
+    gridTemplateColumns: "1fr",
+    gap: "1rem",
+  },
+  contactDetail: {
+    display: "flex",
+    gap: "0.75rem",
+    alignItems: "baseline",
+  },
+  contactDetailLabel: {
+    fontFamily: "Nunito, sans-serif",
+    fontWeight: 700,
+    fontSize: "0.85rem",
+    color: "#B14F73",
+    minWidth: "100px",
+    flexShrink: 0,
+  },
+  contactDetailValue: {
+    fontSize: "0.95rem",
+    color: "#6B5960",
+  },
+};

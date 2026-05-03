@@ -1,0 +1,207 @@
+{
+  "header": {
+    "logo": "Patitas para Adopción",
+    "nav": {
+      "home": "Inicio",
+      "about": "Nosotros",
+      "adoption": "Adopción",
+      "help": "Cómo ayudar",
+      "stories": "Historias felices",
+      "process": "Cómo funciona",
+      "faq": "FAQ",
+      "contact": "Contacto"
+    },
+    "cta": "Quiero adoptar"
+  },
+  "hero": {
+    "badge": "Adopción responsable en BH y Región",
+    "title": "Toda patita merece un hogar lleno de amor",
+    "text": "La ONG Patitas para Adopción conecta perros y gatos rescatados con familias responsables, creando nuevas historias de cuidado, afecto y nuevos comienzos.",
+    "cta_primary": "Ver animales para adopción",
+    "cta_secondary": "Quiero ayudar",
+    "stats": {
+      "adoption": "Adopción responsable",
+      "love": "Cuidado con amor",
+      "new_beginnings": "Nuevos comienzos"
+    }
+  },
+  "about": {
+    "title": "Sobre la ONG Patitas para Adopción",
+    "subtitle": "La ONG Patitas para Adopción nació para transformar el abandono en esperanza. Nuestro trabajo consiste en acoger animales en situación de vulnerabilidad, promover cuidados esenciales y encontrar familias preparadas para ofrecer amor, seguridad y compromiso.",
+    "rescue": {
+      "title": "Rescate",
+      "text": "Acogemos perros y gatos en situación de abandono, riesgo o vulnerabilidad."
+    },
+    "care": {
+      "title": "Cuidado",
+      "text": "Buscamos ofrecer alimentación, protección, cariño y cuidados esenciales hasta la adopción."
+    },
+    "adoption": {
+      "title": "Adopción responsable",
+      "text": "Conectamos a cada animal con familias conscientes, preparadas y comprometidas."
+    }
+  },
+  "adoption": {
+    "title": "Animales esperando un hogar",
+    "subtitle": "Conoce algunas patitas que están listas para ganar una nueva historia.",
+    "interest_btn": "🐾 Tengo interés"
+  },
+  "process": {
+    "title": "Cómo funciona la adopción",
+    "subtitle": "La adopción es un gesto de amor, pero también de responsabilidad. Por eso, seguimos algunos pasos para garantizar lo mejor para cada animal.",
+    "steps": [
+      {
+        "title": "Conoces a los animales disponibles",
+        "text": "Mira las mascotas que están esperando una familia y elige aquella con la que conectes."
+      },
+      {
+        "title": "Hablamos sobre tu rutina",
+        "text": "Entendemos tu espacio, tu rutina, tu experiencia y tus expectativas."
+      },
+      {
+        "title": "Evaluamos la compatibilidad",
+        "text": "Buscamos garantizar que la mascota elegida combine con tu familia y estilo de vida."
+      },
+      {
+        "title": "Acompañamos la adaptación",
+        "text": "Seguimos de cerca los primeros momentos para apoyar este nuevo comienzo."
+      }
+    ]
+  },
+  "help": {
+    "title": "Cómo puedes ayudar",
+    "subtitle": "No todo el mundo puede adoptar, pero todo el mundo puede ayudar de alguna forma.",
+    "btn": "Quiero ayudar",
+    "methods": [
+      {
+        "title": "Donar comida o artículos de cuidado",
+        "description": "Tu donación ayuda en los cuidados diarios de los animales acogidos.",
+        "message": "¡Hola! Me gustaría saber cómo puedo hacer una donación de comida o artículos de cuidado para la ONG Patitas para Adopción."
+      },
+      {
+        "title": "Apadrinar un animal",
+        "description": "Contribuye mensualmente con alimentación, vacunas, exámenes o tratamientos.",
+        "message": "¡Hola! Tengo interés en apadrinar un animal de la ONG Patitas para Adopción. ¿Cómo funciona?"
+      },
+      {
+        "title": "Ser hogar temporal",
+        "description": "Ofrece refugio y cariño mientras la mascota espera su adopción definitiva.",
+        "message": "¡Hola! Me gustaría ser hogar temporal para un animal de la ONG Patitas para Adopción. ¿Cómo puedo ayudar?"
+      },
+      {
+        "title": "Difundir a los animales",
+        "description": "Compartir también salva vidas y ayuda a cada mascota a encontrar una familia.",
+        "message": "¡Hola! Quiero ayudar difundiendo a los animales de la ONG Patitas para Adopción. ¿Cómo puedo hacerlo de la mejor forma?"
+      },
+      {
+        "title": "Ser voluntario",
+        "description": "Ayuda en ferias, transporte, fotos, redes sociales o cuidados.",
+        "message": "¡Hola! Tengo interés en ser voluntario en la ONG Patitas para Adopción. ¿Cómo puedo contribuir?"
+      },
+      {
+        "title": "Contribuir con los gastos veterinarios",
+        "description": "Tratamientos, consultas y emergencias son una parte importante del rescate.",
+        "message": "¡Hola! Me gustaría contribuir con los gastos veterinarios de los animales de la ONG Patitas para Adopción."
+      }
+    ]
+  },
+  "cta_banner": {
+    "title": "Puedes cambiar una vida hoy",
+    "text": "Adoptar, donar, apadrinar, ofrecer un hogar temporal o difundir son formas reales de transformar el futuro de un animal.",
+    "btn_adopt": "Quiero adoptar",
+    "btn_help": "Quiero ayudar"
+  },
+  "stories": {
+    "title": "Historias felices",
+    "subtitle": "Cada adopción es un nuevo comienzo. Aquí celebramos los encuentros que se convirtieron en familia.",
+    "items": [
+      {
+        "quote": "Tenía miedo de adoptar porque nunca había tenido un perro. El equipo de la ONG Patitas me ayudó a entender qué esperar y Bolinho llegó a casa como si siempre hubiera sido nuestro. Hoy es la alegría de la familia.",
+        "name": "Mariana S.",
+        "pet": "adoptó a Bolinho",
+        "icon": "🐶"
+      },
+      {
+        "quote": "Mel llegó asustada, se escondía debajo de la cama. Tres meses después, ya ronronea en mi regazo. Ver esta transformación fue un regalo que no esperaba.",
+        "name": "Carlos R.",
+        "pet": "adoptó a Mel",
+        "icon": "🐱"
+      },
+      {
+        "quote": "Adopté a Pipoca para mi madre, que vivía sola. Llegó y llenó la casa de vida. Me llama todos los días para contarme qué ha hecho. Fue la mejor decisión que tomé.",
+        "name": "Fernanda L.",
+        "pet": "adoptó a Pipoca",
+        "icon": "🐕‍Ç"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "q": "¿Cómo funciona el proceso de adopción?",
+        "a": "El proceso comienza con una conversación para entender tu rutina, tu espacio y el perfil de animal más adecuado para tu familia. A partir de ahí, presentamos los animales disponibles y evaluamos juntos la mejor combinación."
+      },
+      {
+        "q": "¿La adopción tiene algún coste?",
+        "a": "La adopción en sí no es una venta. En algunos casos, se puede solicitar una contribución solidaria para ayudar con los gastos de cuidado, castración, vacunación o tratamiento. Esto se conversa con transparencia durante el proceso."
+      },
+      {
+        "q": "¿Puedo adoptar si vivo en un apartamento?",
+        "a": "Sí, siempre que el entorno sea seguro, con mallas si es necesario, y adecuado al tamaño y comportamiento del animal. Hablamos de esto durante el proceso de adopción."
+      },
+      {
+        "q": "¿Los animales están castrados y vacunados?",
+        "a": "Siempre que sea posible, los animales se entregan con seguimiento veterinario. La información de cada mascota —salud, historial y necesidades— se comparte de forma transparente durante el proceso."
+      },
+      {
+        "q": "¿Cómo puedo ayudar sin adoptar?",
+        "a": "Puedes donar comida o artículos de cuidado, apadrinar un animal, contribuir con los gastos veterinarios, ser voluntario, ofrecer un hogar temporal o simplemente difundir a los animales en tus redes sociales."
+      },
+      {
+        "q": "¿Cómo hago para ser hogar temporal?",
+        "a": "Ponte en contacto por WhatsApp para hablar sobre tu disponibilidad, espacio y experiencia con animales. El hogar temporal es una ayuda enorme para las mascotas que esperan adopción."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Habla con nosotros",
+    "subtitle": "¿Quieres adoptar, ayudar o saber más sobre nuestro trabajo?",
+    "text": "Ponte en contacto con nosotros. Nos encantará hablar contigo y mostrarte formas de transformar la vida de una patita.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "Correo electrónico",
+    "location": "Ubicación",
+    "location_value": "Lagoa Santa, MG",
+    "attendance": "Atención",
+    "attendance_value": "Vía WhatsApp e Instagram",
+    "cnpj": "CNPJ",
+    "cnpj_value": "64.944.050/0001-00 | INSTITUTO MINEIRO DE PROTEÇÃO E CUIDADO ANIMAL"
+  },
+  "footer": {
+    "logo": "Patitas para Adopción",
+    "slogan": "Cada patita merece un hogar",
+    "quick_links": "Enlaces rápidos",
+    "contact_title": "Contacto",
+    "location": "Lagoa Santa, MG",
+    "cnpj": "CNPJ: 64.944.050/0001-00",
+    "made_with": "Hecho con cariño para ayudar a más patitas a encontrar un hogar. 🐾",
+    "whatsapp_message": "¡Hola! Me gustaría saber más sobre la ONG Patitas para Adopción."
+  },
+  "status": {
+    "available": "Disponible para adopción"
+  },
+  "specie": {
+    "dog": "Perro",
+    "cat": "Gato"
+  },
+  "gender": {
+    "male": "Macho",
+    "female": "Hembra"
+  },
+  "size": {
+    "small": "Tamaño pequeño",
+    "medium": "Tamaño mediano",
+    "big": "Tamaño grande"
+  }
+}

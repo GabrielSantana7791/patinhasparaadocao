@@ -1,4 +1,4 @@
-import { CustomCSSProperties } from "../CustomCSSPropertiesType";
+import { CustomCSSProperties } from "../../utils/styles/CustomCSSPropertiesType";
 
 interface FaqStyles {
   section: CustomCSSProperties;

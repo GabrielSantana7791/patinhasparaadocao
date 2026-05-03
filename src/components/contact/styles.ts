@@ -1,4 +1,4 @@
-import { CustomCSSProperties } from "@/src/components/CustomCSSPropertiesType";
+import { CustomCSSProperties } from "@/src/utils/styles/CustomCSSPropertiesType";
 
 interface ContactStyles {
   section: CustomCSSProperties;

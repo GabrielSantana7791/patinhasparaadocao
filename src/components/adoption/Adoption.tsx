@@ -101,7 +101,9 @@ const Adoption: React.FC = () => {
                     <span style={styles.metaItem}>
                       {t(`specie.${pet.specie}`)}
                     </span>
-                    <span style={styles.metaItem}>{t(pet.gender)}</span>
+                    <span style={styles.metaItem}>
+                      {t(`gender.${pet.gender}`)}
+                    </span>
                     <span style={styles.metaItem}>{pet.age}</span>
                     <span style={styles.metaItem}>{t(`size.${pet.size}`)}</span>
                   </div>

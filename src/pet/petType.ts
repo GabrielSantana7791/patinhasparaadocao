@@ -8,8 +8,8 @@ export enum PetSpecies {
 }
 
 export enum PetGender {
-  male = "gender.male",
-  female = "gender.female",
+  male = "male",
+  female = "female",
 }
 
 export enum PetSize {

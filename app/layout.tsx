@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import React from "react";
-
 import "./globals.css";
 import TranslationWrapper from "@/src/components/translatorWrapper/TranslationWrapper";
+import Header from "@/src/components/homeHeader/HomeHeader";
+import Footer from "@/src/components/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,7 +56,11 @@ export default function RootLayout({
           fontFamily: "var(--font-geist-sans), sans-serif",
         }}
       >
-        <TranslationWrapper>{children}</TranslationWrapper>
+        <TranslationWrapper>
+          <Header />
+          <main id="main-content"> {children}</main>
+          <Footer />
+        </TranslationWrapper>
       </body>
     </html>
   );

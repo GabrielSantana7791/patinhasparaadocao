@@ -196,12 +196,17 @@
     "cat": "Gato"
   },
   "gender": {
+    "title": "Género",
     "male": "Macho",
     "female": "Hembra"
   },
   "size": {
+    "title": "tamaño",
     "small": "Tamaño pequeño",
     "medium": "Tamaño mediano",
     "big": "Tamaño grande"
+  },
+  "age": {
+    "title": "Edad"
   }
 }

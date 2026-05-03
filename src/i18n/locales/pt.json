@@ -196,12 +196,17 @@
     "cat": "Gato"
   },
   "gender": {
+    "title": "Gênero",
     "male": "Macho",
     "female": "Fêmea"
   },
   "size": {
+    "title": "Porte",
     "small": "Porte pequeno",
     "medium": "Porte médio",
     "big": "Porte grande"
+  },
+  "age": {
+    "title": "Idade"
   }
 }

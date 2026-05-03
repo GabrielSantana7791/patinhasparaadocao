@@ -196,12 +196,17 @@
     "cat": "Cat"
   },
   "gender": {
+    "title": "Gender",
     "male": "Male",
     "female": "Female"
   },
   "size": {
+    "title": "Size",
     "small": "Small size",
     "medium": "Medium size",
     "big": "Big size"
+  },
+  "age": {
+    "title": "Age"
   }
 }

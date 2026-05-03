@@ -64,7 +64,7 @@ const HomeHeader = () => {
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
-                  href={`#${link.id}`}
+                  href={`/#${link.id}`}
                   style={styles.navLink(hoveredLink === link.id)}
                   onMouseEnter={() => setHoveredLink(link.id)}
                   onMouseLeave={() => setHoveredLink(null)}

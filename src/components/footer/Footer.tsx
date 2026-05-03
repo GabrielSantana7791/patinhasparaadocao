@@ -30,7 +30,7 @@ const Footer = () => {
       <div style={styles.container}>
         <div style={styles.column}>
           <a
-            href="#inicio"
+            href="/#inicio"
             style={styles.logoContainer}
             aria-label={`${t("footer.logo")} — ${t("header.nav.home")}`}
           >
@@ -56,7 +56,7 @@ const Footer = () => {
             {links.map((link) => (
               <li key={link.id}>
                 <a
-                  href={`#${link.id}`}
+                  href={`/#${link.id}`}
                   style={styles.link(hoveredLink === link.id)}
                   onMouseEnter={() => setHoveredLink(link.id)}
                   onMouseLeave={() => setHoveredLink(null)}

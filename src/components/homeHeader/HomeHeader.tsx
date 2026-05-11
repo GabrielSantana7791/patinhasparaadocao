@@ -32,7 +32,7 @@ const HomeHeader = () => {
     <header style={styles.header} role="banner">
       <div style={styles.container}>
         <a
-          href="#inicio"
+          href="/#inicio"
           style={styles.logoLink}
           aria-label="Patinhas para Adoção — página inicial"
         >

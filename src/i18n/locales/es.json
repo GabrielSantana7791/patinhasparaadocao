@@ -44,7 +44,12 @@
   "adoption": {
     "title": "Animales esperando un hogar",
     "subtitle": "Conoce algunas patitas que están listas para ganar una nueva historia.",
-    "interest_btn": "🐾 Tengo interés"
+    "interest_btn": "🐾 Tengo interés",
+    "search_placeholder": "Buscar por nombre...",
+    "all_species": "Todas las especies",
+    "all_genders": "Todos los géneros",
+    "all_sizes": "Todos los tamaños",
+    "no_results": "No se encontraron huellitas con estos filtros. 🐾"
   },
   "process": {
     "title": "Cómo funciona la adopción",

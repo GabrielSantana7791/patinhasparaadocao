@@ -44,7 +44,12 @@
   "adoption": {
     "title": "Animais esperando por um lar",
     "subtitle": "Conheça algumas patinhas que estão prontas para ganhar uma nova história.",
-    "interest_btn": "🐾 Tenho interesse"
+    "interest_btn": "🐾 Tenho interesse",
+    "search_placeholder": "Buscar por nome...",
+    "all_species": "Todas as espécies",
+    "all_genders": "Todos os gêneros",
+    "all_sizes": "Todos os portes",
+    "no_results": "Nenhum amiguinho encontrado com esses filtros. 🐾"
   },
   "process": {
     "title": "Como funciona a adoção",

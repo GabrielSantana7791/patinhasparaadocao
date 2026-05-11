@@ -1,7 +1,7 @@
 "use client";
 
 import { PET_LIST_EXAMPLE } from "@/src/utils/petListExample";
-import PetCard from "@/src/components/PetCard/PetCard";
+import HomePetCard from "@/src/components/HomePetCard/HomePetCard";
 import { useEffect, useState } from "react";
 import Loading from "@/src/components/loading/Loading";
 
@@ -20,7 +20,7 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
   return (
     <>
       {!id && <Loading />}
-      {id && <PetCard pet={PET_LIST_EXAMPLE[id]} />}
+      {id && <HomePetCard pet={PET_LIST_EXAMPLE[id]} />}
     </>
   );
 }

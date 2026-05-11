@@ -1,148 +1,79 @@
 import { CustomCSSProperties } from "@/src/utils/styles/CustomCSSPropertiesType";
 
-interface PetCardStyles {
-  cardContainer: CustomCSSProperties;
-  imageWrapper: CustomCSSProperties;
-  petImage: CustomCSSProperties;
-  statusBadge: CustomCSSProperties;
-  contentContainer: CustomCSSProperties;
-  headerWrapper: CustomCSSProperties;
+interface HomeHeaderStyles {
+  imageContainer: CustomCSSProperties;
+  image: CustomCSSProperties;
+  cardContent: CustomCSSProperties;
   petName: CustomCSSProperties;
-  specieTag: CustomCSSProperties;
-  specieIcon: CustomCSSProperties;
-  personalityText: CustomCSSProperties;
-  attributesGrid: CustomCSSProperties;
-  attributeBox: CustomCSSProperties;
-  attributeLabel: CustomCSSProperties;
-  attributeValue: CustomCSSProperties;
-  actionButton: CustomCSSProperties;
+  badgeRow: CustomCSSProperties;
+  badge: CustomCSSProperties;
+  personality: CustomCSSProperties;
+  card: CustomCSSProperties;
+  button: CustomCSSProperties;
 }
 
-export const styles: PetCardStyles = {
-  cardContainer: {
-    display: "flex",
-    flexDirection: "column",
-    height: "100%",
-    overflow: "hidden",
-    backgroundColor: "#ffffff",
-    borderRadius: "1.5rem",
-    border: "1px solid #E5E0E0",
-    boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-    transition: "all 300ms ease-in-out",
-  },
-  imageWrapper: {
-    position: "relative",
-    width: "100%",
-    aspectRatio: "3 / 2",
-    maxHeight: "16rem",
+export const styles: HomeHeaderStyles = {
+  imageContainer: {
+    height: "280px",
     overflow: "hidden",
   },
-  petImage: {
+  image: {
     width: "100%",
     height: "100%",
-    objectFit: "cover",
-    objectPosition: "center",
-    transition: "transform 500ms ease-in-out",
+    objectFit: "cover" as const,
   },
-  statusBadge: {
-    position: "absolute",
-    top: "1rem",
-    left: "1rem",
-    zIndex: 10,
-    padding: "0.375rem 0.75rem",
-    backgroundColor: "rgba(255, 255, 255, 0.9)",
-    backdropFilter: "blur(4px)",
-    WebkitBackdropFilter: "blur(4px)",
-    borderRadius: "9999px",
-    color: "#4A3A3F",
-    fontSize: "0.75rem",
-    fontWeight: "700",
-    boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-  },
-  contentContainer: {
+  cardContent: {
+    padding: "24px",
     display: "flex",
-    flexDirection: "column",
-    flexGrow: 1,
-    padding: "1.5rem",
-  },
-  headerWrapper: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    marginBottom: "1rem",
+    flexDirection: "column" as const,
+    flex: 1,
   },
   petName: {
-    fontSize: "1.5rem",
+    fontSize: "1.75rem",
     fontWeight: "700",
     color: "#4A3A3F",
-    marginBottom: "0.25rem",
-    lineHeight: 1.25,
+    marginBottom: "12px",
   },
-  specieTag: {
-    display: "inline-block",
-    padding: "0.25rem 0.75rem",
-    backgroundColor: "#F7F4F4",
-    color: "#7C6A6E",
-    fontSize: "0.75rem",
-    fontWeight: "700",
-    borderRadius: "0.5rem",
-    textTransform: "uppercase",
-    letterSpacing: "0.05em",
-  },
-  specieIcon: {
-    fontSize: "1.5rem",
-    transition: "transform 300ms ease",
-  },
-  personalityText: {
-    marginBottom: "1.5rem",
-    color: "#7C6A6E",
-    fontSize: "0.875rem",
-    lineHeight: 1.625,
-    display: "-webkit-box",
-    WebkitLineClamp: 3,
-    WebkitBoxOrient: "vertical",
-    overflow: "hidden",
-  },
-  attributesGrid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-    gap: "0.5rem",
-    marginBottom: "2rem",
-  },
-  attributeBox: {
+  badgeRow: {
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "0.5rem",
-    borderRadius: "1rem",
-    backgroundColor: "rgba(247, 244, 244, 0.5)",
-    border: "1px solid #F7F4F4",
-    transition: "background-color 200ms ease",
+    gap: "8px",
+    flexWrap: "wrap" as const,
+    marginBottom: "16px",
   },
-  attributeLabel: {
-    marginBottom: "0.25rem",
-    fontSize: "10px",
-    color: "#7C6A6E",
-    fontWeight: "700",
-    textTransform: "uppercase",
-  },
-  attributeValue: {
-    fontSize: "0.875rem",
+  badge: {
+    padding: "6px 12px",
+    borderRadius: "30px",
+    fontSize: "0.8rem",
     fontWeight: "600",
-    color: "#4A3A3F",
+    backgroundColor: "#F7F4F4",
+    color: "#6D5D62",
+    textTransform: "uppercase" as const,
   },
-  actionButton: {
-    marginTop: "auto",
+  personality: {
+    fontSize: "0.95rem",
+    color: "#6D5D62",
+    lineHeight: "1.5",
+    marginBottom: "24px",
+    flex: 1,
+  },
+  card: {
+    backgroundColor: "#fff",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+    display: "flex",
+    flexDirection: "column" as const,
+  },
+  button: {
     width: "100%",
-    padding: "1rem",
-    backgroundColor: "#E85D75",
-    color: "#ffffff",
-    fontWeight: "700",
-    borderRadius: "1rem",
+    padding: "14px",
+    borderRadius: "10px",
     border: "none",
+    backgroundColor: "#E91E63",
+    color: "#FFF",
+    fontSize: "1rem",
+    fontWeight: "700",
     cursor: "pointer",
-    boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-    transition: "all 200ms ease-in-out",
+    transition: "opacity 0.2s",
   },
 };

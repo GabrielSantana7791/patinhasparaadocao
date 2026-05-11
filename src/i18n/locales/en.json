@@ -44,7 +44,12 @@
   "adoption": {
     "title": "Animals waiting for a home",
     "subtitle": "Meet some paws that are ready for a new story.",
-    "interest_btn": "🐾 I'm interested"
+    "interest_btn": "🐾 I'm interested",
+    "search_placeholder": "Search by name...",
+    "all_species": "All species",
+    "all_genders": "All genders",
+    "all_sizes": "All sizes",
+    "no_results": "No paws found with these filters. 🐾"
   },
   "process": {
     "title": "How adoption works",

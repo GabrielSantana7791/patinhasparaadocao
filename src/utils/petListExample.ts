@@ -16,7 +16,7 @@ export const PET_LIST_EXAMPLE: PetType[] = [
     size: PetSize.medium,
     personality: "Brincalhão, curioso e muito carinhoso com crianças.",
     image: "/pet-placeholder-1.jpg",
-    status: PetStatus.available,
+    status: PetStatus.adopted,
   },
   {
     id: "2",

@@ -194,7 +194,8 @@
     "whatsapp_message": "Hello! I would like to know more about the Paws for Adoption NGO."
   },
   "status": {
-    "available": "available for adoption"
+    "available": "available for adoption",
+    "adopted": "Adopted"
   },
   "specie": {
     "dog": "Dog",

@@ -1,5 +1,6 @@
 export enum PetStatus {
   available = "available",
+  adopted = "adopted",
 }
 
 export enum PetSpecies {

@@ -194,7 +194,8 @@
     "whatsapp_message": "Olá! Gostaria de saber mais sobre a ONG Patinhas para Adoção."
   },
   "status": {
-    "available": "Disponível para adoção"
+    "available": "Disponível para adoção",
+    "adopted": "Adotado(a)"
   },
   "specie": {
     "dog": "Cachorro",

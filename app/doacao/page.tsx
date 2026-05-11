@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { PET_LIST_EXAMPLE } from "@/src/utils/petListExample";
-import { PetSpecies, PetSize, PetGender } from "@/src/pet/petType";
+import { PetSpecies, PetSize, PetGender, PetType } from "@/src/pet/petType";
 import { styles } from "./styles";
 import { PetCard } from "@/src/components/PetCard/PetCard";
+import { DeletePetModal } from "@/src/components/modal/deletePetModal/DeletePetModal";
+import { EditPetModal } from "@/src/components/modal/editPetModal/EditPetModal";
 
 const DonationSearchPage = () => {
   const { t } = useTranslation();
@@ -14,6 +16,20 @@ const DonationSearchPage = () => {
   const [speciesFilter, setSpeciesFilter] = useState<string>("all");
   const [sizeFilter, setSizeFilter] = useState<string>("all");
   const [genderFilter, setGenderFilter] = useState<string>("all");
+
+  const [selectedPet, setSelectedPet] = useState<PetType | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+
+  const handleOpenEdit = useCallback((pet: PetType) => {
+    setSelectedPet(pet);
+    setIsEditModalOpen(true);
+  }, []);
+
+  const handleOpenDelete = useCallback((pet: PetType) => {
+    setSelectedPet(pet);
+    setIsDeleteModalOpen(true);
+  }, []);
 
   const filteredPets = useMemo(() => {
     return PET_LIST_EXAMPLE.filter((pet) => {
@@ -79,13 +95,33 @@ const DonationSearchPage = () => {
 
       <div style={styles.grid}>
         {filteredPets.length > 0 ? (
-          filteredPets.map((pet) => <PetCard key={pet.id} pet={pet} />)
+          filteredPets.map((pet) => (
+            <PetCard
+              key={pet.id}
+              pet={pet}
+              onEdit={handleOpenEdit}
+              onDelete={handleOpenDelete}
+              isAdmin={true}
+            />
+          ))
         ) : (
           <div style={styles.noResults}>
             <p style={{ fontSize: "1.2rem" }}>{t("adoption.no_results")}</p>
           </div>
         )}
       </div>
+
+      <EditPetModal
+        isEditModalOpen={isEditModalOpen}
+        setIsEditModalOpen={setIsEditModalOpen}
+        selectedPet={selectedPet}
+      />
+
+      <DeletePetModal
+        isDeleteModalOpen={isDeleteModalOpen}
+        setIsDeleteModalOpen={setIsDeleteModalOpen}
+        selectedPet={selectedPet}
+      />
     </div>
   );
 };

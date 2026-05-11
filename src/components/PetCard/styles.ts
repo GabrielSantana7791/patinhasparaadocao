@@ -10,9 +10,37 @@ interface HomeHeaderStyles {
   personality: CustomCSSProperties;
   card: CustomCSSProperties;
   button: CustomCSSProperties;
+  adminActions: {
+    container: CustomCSSProperties;
+    button: CustomCSSProperties;
+  };
 }
 
 export const styles: HomeHeaderStyles = {
+  adminActions: {
+    container: {
+      position: "absolute" as const,
+      top: "12px",
+      right: "12px",
+      display: "flex",
+      gap: "8px",
+      zIndex: 10,
+    },
+    button: {
+      backgroundColor: "rgba(255, 255, 255, 0.9)",
+      border: "none",
+      borderRadius: "50%",
+      width: "36px",
+      height: "36px",
+      cursor: "pointer",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+      fontSize: "16px",
+      transition: "transform 0.2s",
+    },
+  },
   imageContainer: {
     height: "280px",
     overflow: "hidden",

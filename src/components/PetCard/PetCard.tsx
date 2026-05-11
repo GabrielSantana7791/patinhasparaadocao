@@ -5,12 +5,54 @@ import { PetType } from "@/src/pet/petType";
 type PetCardProps = {
   pet: PetType;
   isAdmin?: boolean;
+  onEdit: (pet: PetType) => void;
+  onDelete: (pet: PetType) => void;
 };
 
-export const PetCard = ({ pet, isAdmin = true }: PetCardProps) => {
+export const PetCard = ({
+  onEdit,
+  onDelete,
+  pet,
+  isAdmin = true,
+}: PetCardProps) => {
   const { t } = useTranslation();
+
+  const handleEdit = () => {
+    onEdit(pet);
+  };
+
+  const handleDelete = () => {
+    onDelete(pet);
+  };
+
   return (
-    <article key={pet.id} style={styles.card}>
+    <article key={pet.id} style={{ ...styles.card, position: "relative" }}>
+      {isAdmin && (
+        <div style={styles.adminActions.container}>
+          <button
+            title={t("admin.edit")}
+            style={styles.adminActions.button}
+            onMouseOver={(e) =>
+              (e.currentTarget.style.transform = "scale(1.1)")
+            }
+            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            onClick={handleEdit}
+          >
+            ✏️
+          </button>
+          <button
+            title={t("admin.delete")}
+            style={styles.adminActions.button}
+            onMouseOver={(e) =>
+              (e.currentTarget.style.transform = "scale(1.1)")
+            }
+            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            onClick={handleDelete}
+          >
+            🗑️
+          </button>
+        </div>
+      )}
       <div style={styles.imageContainer}>
         <img src={pet.image} alt={pet.name} style={styles.image} />
       </div>

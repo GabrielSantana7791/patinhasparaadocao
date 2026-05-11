@@ -213,5 +213,14 @@
   },
   "age": {
     "title": "Edad"
+  },
+  "admin": {
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "delete_modal": {
+      "confirmation": "¿Estás seguro de que quieres eliminar el registro de {{name}}? Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "confirm": "Confirmar Eliminación"
+    }
   }
 }

@@ -213,5 +213,14 @@
   },
   "age": {
     "title": "Age"
+  },
+  "admin": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "delete_modal": {
+      "confirmation": "Are you sure you want to delete the registration of {{name}}? This action cannot be undone.",
+      "cancel": "Cancel",
+      "confirm": "Confirm Deletion"
+    }
   }
 }

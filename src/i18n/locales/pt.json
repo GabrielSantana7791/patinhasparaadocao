@@ -213,5 +213,14 @@
   },
   "age": {
     "title": "Idade"
+  },
+  "admin": {
+    "edit": "Editar",
+    "delete": "Excluir",
+    "delete_modal": {
+      "confirmation": "Você tem certeza que deseja excluir o cadastro de {{name}}? Esta ação não pode ser desfeita.",
+      "cancel": "Cancelar",
+      "confirm": "Confirmar Exclusão"
+    }
   }
 }

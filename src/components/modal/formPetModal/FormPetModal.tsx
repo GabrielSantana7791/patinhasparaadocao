@@ -4,15 +4,15 @@ import { useTranslation } from "react-i18next";
 import { PetForm } from "../../forms/petForm/PetForm";
 
 interface FormPetModalProps {
-  isEditModalOpen: boolean;
-  setIsEditModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isModalOpen: boolean;
+  setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
   selectedPet: PetType | null;
   onSubmit: (pet: PetType) => void;
 }
 
 export const FormPetModal = ({
-  isEditModalOpen,
-  setIsEditModalOpen,
+  isModalOpen,
+  setIsModalOpen,
   selectedPet,
   onSubmit,
 }: FormPetModalProps) => {
@@ -20,13 +20,13 @@ export const FormPetModal = ({
 
   return (
     <Modal
-      isOpen={isEditModalOpen}
-      onClose={() => setIsEditModalOpen(false)}
+      isOpen={isModalOpen}
+      onClose={() => setIsModalOpen(false)}
       title={t("admin.edit")}
     >
       <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         <PetForm
-          onCancel={() => setIsEditModalOpen(false)}
+          onCancel={() => setIsModalOpen(false)}
           initialData={selectedPet}
           onSubmit={onSubmit}
         />

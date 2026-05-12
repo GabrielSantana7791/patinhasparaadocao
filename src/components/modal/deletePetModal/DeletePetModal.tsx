@@ -7,14 +7,22 @@ interface DeletePetModalProps {
   isDeleteModalOpen: boolean;
   setIsDeleteModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
   selectedPet: PetType | null;
+  onSubmit: (pet: PetType) => void;
 }
 
 export const DeletePetModal = ({
   isDeleteModalOpen,
   setIsDeleteModalOpen,
   selectedPet,
+  onSubmit,
 }: DeletePetModalProps) => {
   const { t } = useTranslation();
+
+  const handleDeletePet = () => {
+    if (!selectedPet) return;
+    onSubmit(selectedPet);
+    setIsDeleteModalOpen(false);
+  };
 
   return (
     <Modal
@@ -30,7 +38,7 @@ export const DeletePetModal = ({
         >
           {t("admin.delete_modal.cancel")}
         </button>
-        <button style={styles.confirmButton}>
+        <button style={styles.confirmButton} onClick={() => handleDeletePet()}>
           {t("admin.delete_modal.confirm")}
         </button>
       </div>

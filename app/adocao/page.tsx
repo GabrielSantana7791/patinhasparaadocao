@@ -1,18 +1,28 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { PET_LIST_EXAMPLE } from "@/src/utils/petListExample";
 import { PetSpecies, PetSize, PetGender, PetType } from "@/src/pet/petType";
 import { styles } from "./styles";
 import { PetCard } from "@/src/components/petCard/PetCard";
 import { DeletePetModal } from "@/src/components/modal/deletePetModal/DeletePetModal";
 import { FormPetModal } from "@/src/components/modal/formPetModal/FormPetModal";
+import {
+  useCreatePet,
+  useDeletePet,
+  useFetchPets,
+  useUpdatePet,
+} from "@/src/hooks/firebase";
 
 const DonationSearchPage = () => {
   const { t } = useTranslation();
 
   const isAdmin = true;
+
+  const { data: createPetData, exec: createPetExec } = useCreatePet();
+  const { exec: updatePetExec } = useUpdatePet();
+  const { data: petsData, exec: fetchPetsExec } = useFetchPets();
+  const { exec: deletePetExec } = useDeletePet();
 
   const [searchTerm, setSearchTerm] = useState("");
   const [speciesFilter, setSpeciesFilter] = useState<string>("all");
@@ -22,6 +32,19 @@ const DonationSearchPage = () => {
   const [selectedPet, setSelectedPet] = useState<PetType | null>(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+
+  useEffect(() => {
+    fetchPetsExec();
+  }, []);
+
+  useEffect(() => {
+    if (!createPetData) return;
+
+    fetchPetsExec();
+
+    setSelectedPet(null);
+    setIsEditModalOpen(false);
+  }, [createPetData]);
 
   const handleOpenEdit = useCallback((pet: PetType) => {
     setSelectedPet(pet);
@@ -33,14 +56,28 @@ const DonationSearchPage = () => {
     setIsDeleteModalOpen(true);
   }, []);
 
-  const handleEditSubmit = (pet: PetType) => {
-    console.log(pet);
-  };
-
-  const handleAddNewPet = useCallback(() => {
+  const handleOpenCreate = useCallback(() => {
     setSelectedPet(null);
     setIsEditModalOpen(true);
   }, []);
+
+  const handleFormSubmit = (pet: PetType) => {
+    if (pet.id) {
+      updatePetExec(pet.id, pet);
+      setSelectedPet(null);
+      setIsEditModalOpen(false);
+      fetchPetsExec();
+
+      return;
+    }
+    createPetExec(pet);
+  };
+
+  const handleDeleteSubmit = (pet: PetType) => {
+    deletePetExec(pet.id);
+    setIsDeleteModalOpen(false);
+    fetchPetsExec();
+  };
 
   const handleButtonHover = (
     e: React.MouseEvent<HTMLButtonElement>,
@@ -56,7 +93,7 @@ const DonationSearchPage = () => {
   };
 
   const filteredPets = useMemo(() => {
-    return PET_LIST_EXAMPLE.filter((pet) => {
+    return petsData?.filter((pet) => {
       const matchesSearch = pet.name
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
@@ -67,7 +104,7 @@ const DonationSearchPage = () => {
         genderFilter === "all" || pet.gender === genderFilter;
       return matchesSearch && matchesSpecies && matchesSize && matchesGender;
     });
-  }, [searchTerm, speciesFilter, sizeFilter, genderFilter]);
+  }, [searchTerm, speciesFilter, sizeFilter, genderFilter, petsData]);
 
   return (
     <div style={styles.wrapper}>
@@ -79,7 +116,7 @@ const DonationSearchPage = () => {
             <br />
             <button
               style={styles.addNewPetButton}
-              onClick={handleAddNewPet}
+              onClick={handleOpenCreate}
               onMouseOver={(e) => handleButtonHover(e, true)}
               onMouseOut={(e) => handleButtonHover(e, false)}
               title={t("admin.pet_form.btn_add_new_pet")}
@@ -131,9 +168,8 @@ const DonationSearchPage = () => {
           <option value={PetSize.big}>{t("size.big")}</option>
         </select>
       </section>
-
       <div style={styles.grid}>
-        {filteredPets.length > 0 ? (
+        {filteredPets && filteredPets.length > 0 ? (
           filteredPets.map((pet) => (
             <PetCard
               key={pet.id}
@@ -151,16 +187,17 @@ const DonationSearchPage = () => {
       </div>
 
       <FormPetModal
-        isEditModalOpen={isEditModalOpen}
-        setIsEditModalOpen={setIsEditModalOpen}
+        isModalOpen={isEditModalOpen}
+        setIsModalOpen={setIsEditModalOpen}
         selectedPet={selectedPet}
-        onSubmit={handleEditSubmit}
+        onSubmit={handleFormSubmit}
       />
 
       <DeletePetModal
         isDeleteModalOpen={isDeleteModalOpen}
         setIsDeleteModalOpen={setIsDeleteModalOpen}
         selectedPet={selectedPet}
+        onSubmit={handleDeleteSubmit}
       />
     </div>
   );

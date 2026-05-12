@@ -10,6 +10,7 @@ interface HomeHeaderStyles {
   select: CustomCSSProperties;
   grid: CustomCSSProperties;
   noResults: CustomCSSProperties;
+  addNewPetButton: CustomCSSProperties;
 }
 
 export const styles: HomeHeaderStyles = {
@@ -22,6 +23,9 @@ export const styles: HomeHeaderStyles = {
   header: {
     textAlign: "center" as const,
     marginBottom: "40px",
+    display: "flex",
+    flexDirection: "column" as "column",
+    alignItems: "center",
   },
   title: {
     fontSize: "2.5rem",
@@ -72,5 +76,21 @@ export const styles: HomeHeaderStyles = {
     gridColumn: "1 / -1",
     padding: "60px 20px",
     color: "#6D5D62",
+  },
+  addNewPetButton: {
+    backgroundColor: "#66BB6A",
+    color: "white",
+    padding: "12px 25px",
+    borderRadius: "25px",
+    border: "none",
+    cursor: "pointer",
+    fontSize: "1.1rem",
+    fontWeight: "bold",
+    marginBottom: "20px",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+    transition: "transform 0.2s ease-in-out, background-color 0.2s ease-in-out",
   },
 };

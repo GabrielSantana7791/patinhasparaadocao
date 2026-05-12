@@ -222,6 +222,22 @@
       "confirmation": "Are you sure you want to delete the registration of {{name}}? This action cannot be undone.",
       "cancel": "Cancel",
       "confirm": "Confirm Deletion"
+    },
+    "pet_form": {
+      "title_edit": "Edit Pet",
+      "title_create": "Create New Pet",
+      "label_name": "Name",
+      "label_species": "Species",
+      "label_gender": "Gender",
+      "label_age": "Age",
+      "label_size": "Size",
+      "label_personality": "Personality",
+      "label_image": "Image URL",
+      "label_status": "Status",
+      "btn_save": "Save Changes",
+      "btn_create": "Create Pet",
+      "btn_cancel": "Cancel",
+      "btn_add_new_pet": "Add New Pet"
     }
   }
 }

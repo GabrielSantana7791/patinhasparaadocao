@@ -5,12 +5,14 @@ import { useTranslation } from "react-i18next";
 import { PET_LIST_EXAMPLE } from "@/src/utils/petListExample";
 import { PetSpecies, PetSize, PetGender, PetType } from "@/src/pet/petType";
 import { styles } from "./styles";
-import { PetCard } from "@/src/components/PetCard/PetCard";
+import { PetCard } from "@/src/components/petCard/PetCard";
 import { DeletePetModal } from "@/src/components/modal/deletePetModal/DeletePetModal";
-import { EditPetModal } from "@/src/components/modal/editPetModal/EditPetModal";
+import { FormPetModal } from "@/src/components/modal/formPetModal/FormPetModal";
 
 const DonationSearchPage = () => {
   const { t } = useTranslation();
+
+  const isAdmin = true;
 
   const [searchTerm, setSearchTerm] = useState("");
   const [speciesFilter, setSpeciesFilter] = useState<string>("all");
@@ -31,6 +33,28 @@ const DonationSearchPage = () => {
     setIsDeleteModalOpen(true);
   }, []);
 
+  const handleEditSubmit = (pet: PetType) => {
+    console.log(pet);
+  };
+
+  const handleAddNewPet = useCallback(() => {
+    setSelectedPet(null);
+    setIsEditModalOpen(true);
+  }, []);
+
+  const handleButtonHover = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    isHovering: boolean,
+  ) => {
+    if (isHovering) {
+      e.currentTarget.style.transform = "scale(1.05)";
+      e.currentTarget.style.backgroundColor = "#943E5F";
+    } else {
+      e.currentTarget.style.transform = "scale(1)";
+      e.currentTarget.style.backgroundColor = "#B14F73";
+    }
+  };
+
   const filteredPets = useMemo(() => {
     return PET_LIST_EXAMPLE.filter((pet) => {
       const matchesSearch = pet.name
@@ -50,6 +74,21 @@ const DonationSearchPage = () => {
       <header style={styles.header}>
         <h1 style={styles.title}>{t("adoption.title")}</h1>
         <p style={styles.subtitle}>{t("adoption.subtitle")}</p>
+        {isAdmin && (
+          <>
+            <br />
+            <button
+              style={styles.addNewPetButton}
+              onClick={handleAddNewPet}
+              onMouseOver={(e) => handleButtonHover(e, true)}
+              onMouseOut={(e) => handleButtonHover(e, false)}
+              title={t("admin.pet_form.btn_add_new_pet")}
+            >
+              <span style={{ fontSize: "1.5rem", lineHeight: 1 }}>+</span>{" "}
+              {t("admin.pet_form.btn_add_new_pet")}
+            </button>
+          </>
+        )}
       </header>
 
       <section style={styles.filterBar} aria-label="Filtros de busca">
@@ -101,7 +140,7 @@ const DonationSearchPage = () => {
               pet={pet}
               onEdit={handleOpenEdit}
               onDelete={handleOpenDelete}
-              isAdmin={true}
+              isAdmin={isAdmin}
             />
           ))
         ) : (
@@ -111,10 +150,11 @@ const DonationSearchPage = () => {
         )}
       </div>
 
-      <EditPetModal
+      <FormPetModal
         isEditModalOpen={isEditModalOpen}
         setIsEditModalOpen={setIsEditModalOpen}
         selectedPet={selectedPet}
+        onSubmit={handleEditSubmit}
       />
 
       <DeletePetModal

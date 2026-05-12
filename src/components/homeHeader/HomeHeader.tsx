@@ -78,7 +78,7 @@ const HomeHeader = () => {
         </nav>
 
         <a
-          href="#adocao"
+          href="/#adocao"
           style={styles.cta(isCtaHovered, isMobile)}
           onMouseEnter={() => setIsCtaHovered(true)}
           onMouseLeave={() => setIsCtaHovered(false)}

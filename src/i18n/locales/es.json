@@ -222,6 +222,22 @@
       "confirmation": "¿Estás seguro de que quieres eliminar el registro de {{name}}? Esta acción no se puede deshacer.",
       "cancel": "Cancelar",
       "confirm": "Confirmar Eliminación"
+    },
+    "pet_form": {
+      "title_edit": "Editar Mascota",
+      "title_create": "Crear Nueva Mascota",
+      "label_name": "Nombre",
+      "label_species": "Especie",
+      "label_gender": "Género",
+      "label_age": "Edad",
+      "label_size": "Tamaño",
+      "label_personality": "Personalidad",
+      "label_image": "URL de la Imagen",
+      "label_status": "Estado",
+      "btn_save": "Guardar Cambios",
+      "btn_create": "Crear Mascota",
+      "btn_cancel": "Cancelar",
+      "btn_add_new_pet": "Añadir Nueva Mascota"
     }
   }
 }

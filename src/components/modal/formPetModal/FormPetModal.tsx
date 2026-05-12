@@ -1,19 +1,21 @@
 import { PetType } from "@/src/pet/petType";
 import { Modal } from "../Modal";
-import { styles } from "./styles";
 import { useTranslation } from "react-i18next";
+import { PetForm } from "../../forms/petForm/PetForm";
 
-interface EditPetModalProps {
+interface FormPetModalProps {
   isEditModalOpen: boolean;
   setIsEditModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
   selectedPet: PetType | null;
+  onSubmit: (pet: PetType) => void;
 }
 
-export const EditPetModal = ({
+export const FormPetModal = ({
   isEditModalOpen,
   setIsEditModalOpen,
   selectedPet,
-}: EditPetModalProps) => {
+  onSubmit,
+}: FormPetModalProps) => {
   const { t } = useTranslation();
 
   return (
@@ -23,21 +25,11 @@ export const EditPetModal = ({
       title={t("admin.edit")}
     >
       <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-        <p>
-          Formulário de edição para <strong>{selectedPet?.name}</strong>.
-          <br />
-          (Aqui entrarão os inputs no futuro)
-        </p>
-        <button
-          style={{
-            ...styles.select,
-            backgroundColor: "#E2DADB",
-            border: "none",
-          }}
-          onClick={() => setIsEditModalOpen(false)}
-        >
-          Fechar
-        </button>
+        <PetForm
+          onCancel={() => setIsEditModalOpen(false)}
+          initialData={selectedPet}
+          onSubmit={onSubmit}
+        />
       </div>
     </Modal>
   );

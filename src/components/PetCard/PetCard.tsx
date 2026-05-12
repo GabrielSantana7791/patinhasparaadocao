@@ -9,12 +9,7 @@ type PetCardProps = {
   onDelete: (pet: PetType) => void;
 };
 
-export const PetCard = ({
-  onEdit,
-  onDelete,
-  pet,
-  isAdmin = true,
-}: PetCardProps) => {
+export const PetCard = ({ onEdit, onDelete, pet, isAdmin }: PetCardProps) => {
   const { t } = useTranslation();
 
   const isAvailable = pet.status === PetStatus.available;

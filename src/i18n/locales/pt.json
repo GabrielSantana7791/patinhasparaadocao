@@ -222,6 +222,22 @@
       "confirmation": "Você tem certeza que deseja excluir o cadastro de {{name}}? Esta ação não pode ser desfeita.",
       "cancel": "Cancelar",
       "confirm": "Confirmar Exclusão"
+    },
+    "pet_form": {
+      "title_edit": "Editar Pet",
+      "title_create": "Criar Novo Pet",
+      "label_name": "Nome",
+      "label_species": "Espécie",
+      "label_gender": "Gênero",
+      "label_age": "Idade",
+      "label_size": "Porte",
+      "label_personality": "Personalidade",
+      "label_image": "URL da Imagem",
+      "label_status": "Status",
+      "btn_save": "Salvar Alterações",
+      "btn_create": "Criar Pet",
+      "btn_cancel": "Cancelar",
+      "btn_add_new_pet": "Adicionar Novo Pet"
     }
   }
 }

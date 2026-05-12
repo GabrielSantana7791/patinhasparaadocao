@@ -28,8 +28,11 @@ export const styles: ModalStyles = {
     backgroundColor: "#fff",
     padding: "32px",
     borderRadius: "20px",
-    maxWidth: "500px",
+    maxWidth: "600px",
     width: "90%",
+    maxHeight: "90vh",
+    display: "flex",
+    flexDirection: "column",
     boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
     position: "relative" as const,
   },
@@ -59,6 +62,8 @@ export const styles: ModalStyles = {
   body: {
     color: "#6D5D62",
     lineHeight: "1.6",
+    overflowY: "auto" as const,
+    flex: 1,
   },
   footer: {
     marginTop: "32px",

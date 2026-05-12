@@ -5,9 +5,10 @@ import {
   addDoc,
   doc,
   updateDoc,
+  deleteDoc,
 } from "firebase/firestore";
-import { db } from "../config";
 import { FireBaseCollections } from "../collectionName";
+import { db } from "../../../firebase/config";
 
 export const fetchPets = async (): Promise<PetType[]> => {
   const petsCollection = collection(db, FireBaseCollections.pet);
@@ -19,10 +20,13 @@ export const fetchPets = async (): Promise<PetType[]> => {
   return petList;
 };
 
-export const createPet = async (pet: Omit<PetType, "id">): Promise<PetType> => {
+export const createPet = async ({
+  id,
+  ...filteredPet
+}: PetType): Promise<PetType> => {
   const petsCollection = collection(db, FireBaseCollections.pet);
-  const docRef = await addDoc(petsCollection, pet);
-  return { id: docRef.id, ...pet } as PetType;
+  const docRef = await addDoc(petsCollection, filteredPet);
+  return { id: docRef.id, ...filteredPet } as PetType;
 };
 
 export const updatePet = async (
@@ -32,4 +36,9 @@ export const updatePet = async (
   const petDoc = doc(db, FireBaseCollections.pet, id);
   const { id: _, ...data } = pet;
   await updateDoc(petDoc, data);
+};
+
+export const deletePet = async (id: string): Promise<void> => {
+  const petDoc = doc(db, FireBaseCollections.pet, id);
+  await deleteDoc(petDoc);
 };

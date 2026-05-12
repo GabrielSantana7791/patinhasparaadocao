@@ -1,7 +1,7 @@
 "use client";
 
 import { PET_LIST_EXAMPLE } from "@/src/utils/petListExample";
-import HomePetCard from "@/src/components/HomePetCard/HomePetCard";
+import HomePetCard from "@/src/components/homePetCard/HomePetCard";
 import { useEffect, useState } from "react";
 import Loading from "@/src/components/loading/Loading";
 

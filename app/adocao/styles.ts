@@ -78,7 +78,7 @@ export const styles: HomeHeaderStyles = {
     color: "#6D5D62",
   },
   addNewPetButton: {
-    backgroundColor: "#66BB6A",
+    backgroundColor: "#B14F73",
     color: "white",
     padding: "12px 25px",
     borderRadius: "25px",

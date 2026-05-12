@@ -6,7 +6,7 @@ import { initReactI18next } from "react-i18next/initReactI18next";
 
 i18n.use(initReactI18next).init({
   resources: {
-    pt: { translation: es },
+    pt: { translation: pt },
     en: { translation: en },
     es: { translation: es },
   },

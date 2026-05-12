@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { PET_LIST_EXAMPLE } from "@/src/utils/petListExample";
 import { PetSpecies, PetSize, PetGender, PetType } from "@/src/pet/petType";
 import { styles } from "./styles";
-import { PetCard } from "@/src/components/petCard/PetCard";
+import { PetCard } from "@/src/components/PetCard/PetCard";
 import { DeletePetModal } from "@/src/components/modal/deletePetModal/DeletePetModal";
 import { FormPetModal } from "@/src/components/modal/formPetModal/FormPetModal";
 

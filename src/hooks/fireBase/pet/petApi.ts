@@ -6,18 +6,43 @@ import {
   doc,
   updateDoc,
   deleteDoc,
+  QueryDocumentSnapshot,
+  DocumentData,
+  getCountFromServer,
 } from "firebase/firestore";
 import { FireBaseCollections } from "../collectionName";
 import { db } from "../../../firebase/config";
+import { getFilteredQueryAndConstraints } from "@/src/firebase/getFilteredQueryAndConstraints";
 
-export const fetchPets = async (): Promise<PetType[]> => {
+export const fetchPets = async (
+  pageSize: number = 100,
+  filters?: Partial<PetType>,
+  lastVisibleDoc?: QueryDocumentSnapshot<DocumentData>,
+): Promise<{
+  pets: PetType[];
+  lastVisible: QueryDocumentSnapshot<unknown, DocumentData> | null;
+  count: number;
+}> => {
   const petsCollection = collection(db, FireBaseCollections.pet);
-  const petSnapshot = await getDocs(petsCollection);
-  const petList = petSnapshot.docs.map((doc) => ({
+
+  const { query } = getFilteredQueryAndConstraints({
+    collectionReference: petsCollection,
+    filters,
+    lastVisibleDoc,
+    pageSize,
+  });
+  const petSnapshot = await getDocs(query);
+  const countResult = await getCountFromServer(query);
+  const count = countResult.data().count;
+
+  const lastVisible = petSnapshot.docs[petSnapshot.docs.length - 1] || null;
+
+  const pets = petSnapshot.docs.map((doc) => ({
     id: doc.id,
     ...(doc.data() as Omit<PetType, "id">),
-  }));
-  return petList;
+  })) as PetType[];
+
+  return { pets, lastVisible, count };
 };
 
 export const createPet = async ({

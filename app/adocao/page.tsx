@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { PetSpecies, PetSize, PetGender, PetType } from "@/src/pet/petType";
 import { styles } from "./styles";
@@ -45,6 +45,17 @@ const DonationSearchPage = () => {
     setSelectedPet(null);
     setIsEditModalOpen(false);
   }, [createPetData]);
+
+  useEffect(() => {
+    const filters = {
+      name: searchTerm,
+      specie: speciesFilter === "all" ? "" : speciesFilter,
+      size: sizeFilter === "all" ? "" : sizeFilter,
+      gender: genderFilter === "all" ? "" : genderFilter,
+    };
+
+    fetchPetsExec(1000, filters);
+  }, [searchTerm, speciesFilter, sizeFilter, genderFilter]);
 
   const handleOpenEdit = useCallback((pet: PetType) => {
     setSelectedPet(pet);
@@ -91,20 +102,6 @@ const DonationSearchPage = () => {
       e.currentTarget.style.backgroundColor = "#B14F73";
     }
   };
-
-  const filteredPets = useMemo(() => {
-    return petsData?.filter((pet) => {
-      const matchesSearch = pet.name
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase());
-      const matchesSpecies =
-        speciesFilter === "all" || pet.specie === speciesFilter;
-      const matchesSize = sizeFilter === "all" || pet.size === sizeFilter;
-      const matchesGender =
-        genderFilter === "all" || pet.gender === genderFilter;
-      return matchesSearch && matchesSpecies && matchesSize && matchesGender;
-    });
-  }, [searchTerm, speciesFilter, sizeFilter, genderFilter, petsData]);
 
   return (
     <div style={styles.wrapper}>
@@ -169,8 +166,8 @@ const DonationSearchPage = () => {
         </select>
       </section>
       <div style={styles.grid}>
-        {filteredPets && filteredPets.length > 0 ? (
-          filteredPets.map((pet) => (
+        {petsData && petsData.pets.length > 0 ? (
+          petsData.pets.map((pet) => (
             <PetCard
               key={pet.id}
               pet={pet}

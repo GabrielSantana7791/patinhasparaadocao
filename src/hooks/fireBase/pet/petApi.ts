@@ -16,7 +16,7 @@ import { db } from "../../../firebase/config";
 import { getFilteredQueryAndConstraints } from "@/src/firebase/getFilteredQueryAndConstraints";
 
 export const fetchPets = async (
-  pageSize: number = 100,
+  pageSize: number = 1000,
   filters?: Partial<PetType>,
   lastVisibleDoc?: QueryDocumentSnapshot<DocumentData>,
 ): Promise<{

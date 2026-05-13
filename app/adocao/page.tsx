@@ -41,7 +41,7 @@ const DonationSearchPage = () => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
-  const isAdmin = !!adminResult?.email;
+  const isAdmin = !!adminResult?.uid;
 
   useEffect(() => {
     fetchPetsExec();
@@ -50,7 +50,7 @@ const DonationSearchPage = () => {
   useEffect(() => {
     if (!user) return;
 
-    fetchAdminByEmail(user.email);
+    fetchAdminByEmail(user.uid);
   }, [user]);
 
   useEffect(() => {
@@ -63,14 +63,20 @@ const DonationSearchPage = () => {
   }, [createPetData]);
 
   useEffect(() => {
-    const filters = {
-      name: searchTerm,
-      specie: speciesFilter === "all" ? "" : speciesFilter,
-      size: sizeFilter === "all" ? "" : sizeFilter,
-      gender: genderFilter === "all" ? "" : genderFilter,
-    };
+    const handler = setTimeout(() => {
+      const filters = {
+        name: searchTerm,
+        specie: speciesFilter === "all" ? "" : speciesFilter,
+        size: sizeFilter === "all" ? "" : sizeFilter,
+        gender: genderFilter === "all" ? "" : genderFilter,
+      };
 
-    fetchPetsExec(1000, filters);
+      fetchPetsExec(1000, filters);
+    }, 500);
+
+    return () => {
+      clearTimeout(handler);
+    };
   }, [searchTerm, speciesFilter, sizeFilter, genderFilter]);
 
   const handleOpenEdit = useCallback((pet: PetType) => {

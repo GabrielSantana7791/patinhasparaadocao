@@ -1,0 +1,258 @@
+{
+  "header": {
+    "logo": "Patinhas para Adoção",
+    "nav": {
+      "home": "Início",
+      "about": "Sobre",
+      "adoption": "Adoção",
+      "help": "Como ajudar",
+      "stories": "Histórias felizes",
+      "process": "Como funciona",
+      "faq": "FAQ",
+      "contact": "Contato"
+    },
+    "cta": "Quero adotar",
+    "login": "Login",
+    "logout": "Sair"
+  },
+  "hero": {
+    "badge": "Adoção responsável em BH e Região",
+    "title": "Toda patinha merece um lar cheio de amor",
+    "text": "A ONG Patinhas para Adoção conecta cães e gatos resgatados a famílias responsáveis, criando novas histórias de cuidado, afeto e recomeço.",
+    "cta_primary": "Ver animais para adoção",
+    "cta_secondary": "Quero ajudar",
+    "stats": {
+      "adoption": "Adoção responsável",
+      "love": "Cuidado com amor",
+      "new_beginnings": "Novos recomeços"
+    }
+  },
+  "about": {
+    "title": "Sobre a ONG Patinhas para Adoção",
+    "subtitle": "A ONG Patinhas para Adoção nasceu para transformar abandono em esperança. Nosso trabalho é acolher animais em situação de vulnerabilidade, promover cuidados essenciais e encontrar famílias preparadas para oferecer amor, segurança e compromisso.",
+    "rescue": {
+      "title": "Resgate",
+      "text": "Acolhemos cães e gatos em situação de abandono, risco ou vulnerabilidade."
+    },
+    "care": {
+      "title": "Cuidado",
+      "text": "Buscamos oferecer alimentação, proteção, carinho e cuidados essenciais até a adoção."
+    },
+    "adoption": {
+      "title": "Adoção responsável",
+      "text": "Conectamos cada animal a famílias conscientes, preparadas e comprometidas."
+    }
+  },
+  "adoption": {
+    "title": "Animais esperando por um lar",
+    "subtitle": "Conheça algumas patinhas que estão prontas para ganhar uma nova história.",
+    "interest_btn": "🐾 Tenho interesse",
+    "search_placeholder": "Buscar por nome...",
+    "all_species": "Todas as espécies",
+    "all_genders": "Todos os gêneros",
+    "all_sizes": "Todos os portes",
+    "find_pet": "Buscar pet",
+    "all_statuses": "Todos os status",
+    "no_results": "Nenhum amiguinho encontrado com esses filtros. 🐾"
+  },
+  "process": {
+    "title": "Como funciona a adoção",
+    "subtitle": "A adoção é um gesto de amor, mas também de responsabilidade. Por isso, seguimos alguns passos para garantir o melhor para cada animal.",
+    "steps": [
+      {
+        "title": "Você conhece os animais disponíveis",
+        "text": "Veja os pets que estão aguardando uma família e escolha aquele com quem você se conecta."
+      },
+      {
+        "title": "Conversamos sobre sua rotina",
+        "text": "Entendemos seu espaço, sua rotina, sua experiência e suas expectativas."
+      },
+      {
+        "title": "Avaliamos a combinação",
+        "text": "Buscamos garantir que o pet escolhido combine com sua família e estilo de vida."
+      },
+      {
+        "title": "Acompanhamos a adaptação",
+        "text": "Seguimos por perto nos primeiros momentos para apoiar esse novo começo."
+      }
+    ]
+  },
+  "help": {
+    "title": "Como você pode ajudar",
+    "subtitle": "Nem todo mundo pode adotar, mas todo mundo pode ajudar de alguma forma.",
+    "btn": "Quero ajudar",
+    "methods": [
+      {
+        "title": "Doar ração ou itens de cuidado",
+        "description": "Sua doação ajuda nos cuidados diários com os animais acolhidos.",
+        "message": "Olá! Gostaria de saber como posso fazer uma doação de ração ou itens de cuidado para a ONG Patinhas para Adoção."
+      },
+      {
+        "title": "Apadrinhar um animal",
+        "description": "Contribua mensalmente com alimentação, vacinas, exames ou tratamentos.",
+        "message": "Olá! Tenho interesse em apadrinhar um animal da ONG Patinhas para Adoção. Como funciona?"
+      },
+      {
+        "title": "Ser lar temporário",
+        "description": "Ofereça abrigo e carinho enquanto o pet espera pela adoção definitiva.",
+        "message": "Olá! Gostaria de ser lar temporário para um animal da ONG Patinhas para Adoção. Como posso ajudar?"
+      },
+      {
+        "title": "Divulgar os animais",
+        "description": "Compartilhar também salva vidas e ajuda cada pet a encontrar uma família.",
+        "message": "Olá! Quero ajudar divulgando os animais da ONG Patinhas para Adoção. Como posso fazer isso da melhor forma?"
+      },
+      {
+        "title": "Ser voluntário",
+        "description": "Ajude em feiras, transporte, fotos, redes sociais ou cuidados.",
+        "message": "Olá! Tenho interesse em ser voluntário na ONG Patinhas para Adoção. Como posso contribuir?"
+      },
+      {
+        "title": "Contribuir com custos veterinários",
+        "description": "Tratamentos, consultas e emergências são parte importante do resgate.",
+        "message": "Olá! Gostaria de contribuir com custos veterinários para os animais da ONG Patinhas para Adoção."
+      }
+    ]
+  },
+  "cta_banner": {
+    "title": "Você pode mudar uma vida hoje",
+    "text": "Adotar, doar, apadrinhar, oferecer lar temporário ou divulgar são formas reais de transformar o futuro de um animal.",
+    "btn_adopt": "Quero adotar",
+    "btn_help": "Quero ajudar"
+  },
+  "stories": {
+    "title": "Histórias felizes",
+    "subtitle": "Cada adoção é um recomeço. Aqui celebramos encontros que viraram família.",
+    "items": [
+      {
+        "quote": "Estava com medo de adotar porque nunca tinha tido um cachorro. A equipe da ONG Patinhas me ajudou a entender o que esperar e o Bolinho chegou em casa como se sempre tivesse sido nosso. Hoje ele é a alegria da família.",
+        "name": "Mariana S.",
+        "pet": "adotou o Bolinho",
+        "icon": "🐶"
+      },
+      {
+        "quote": "A Mel chegou assustada, se escondia embaixo da cama. Três meses depois ela já ronrona no meu colo. Ver essa transformação foi um presente que não esperava.",
+        "name": "Carlos R.",
+        "pet": "adotou a Mel",
+        "icon": "🐱"
+      },
+      {
+        "quote": "Adotei o Pipoca para minha mãe, que morava sozinha. Ele chegou e encheu a casa de vida. Ela me liga todo dia para me contar o que ele aprontou. Foi a melhor decisão que tomei.",
+        "name": "Fernanda L.",
+        "pet": "adotou o Pipoca",
+        "icon": "🐕‍🦺"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "items": [
+      {
+        "q": "Como funciona o processo de adoção?",
+        "a": "O processo começa com uma conversa para entendermos sua rotina, seu espaço e o perfil de animal mais adequado para sua família. A partir daí, apresentamos os animais disponíveis e avaliamos juntos a melhor combinação."
+      },
+      {
+        "q": "A adoção tem custo?",
+        "a": "A adoção em si não é uma venda. Em alguns casos, pode ser solicitada uma contribuição solidária para ajudar com custos de cuidado, castração, vacinação ou tratamento. Isso é conversado com transparência durante o processo."
+      },
+      {
+        "q": "Posso adotar morando em apartamento?",
+        "a": "Sim, desde que o ambiente seja seguro, telado quando necessário, e adequado ao porte e comportamento do animal. Conversamos sobre isso durante o processo de adoção."
+      },
+      {
+        "q": "Os animais são castrados e vacinados?",
+        "a": "Sempre que possível, os animais são encaminhados com acompanhamento veterinário. As informações de cada pet — saúde, histórico e necessidades — são compartilhadas de forma transparente durante o processo."
+      },
+      {
+        "q": "Como posso ajudar sem adotar?",
+        "a": "Você pode doar ração ou itens de cuidado, apadrinhar um animal, contribuir com custos veterinários, ser voluntário, oferecer lar temporário ou simplesmente divulgar os animais nas suas redes sociais."
+      },
+      {
+        "q": "Como faço para ser lar temporário?",
+        "a": "Entre em contato pelo WhatsApp para conversarmos sobre sua disponibilidade, espaço e experiência com animais. O lar temporário é uma ajuda enorme para os pets que aguardam adoção."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Fale com a gente",
+    "subtitle": "Quer adotar, ajudar ou saber mais sobre nosso trabalho?",
+    "text": "Entre em contato com a gente. Vamos adorar conversar com você e apresentar formas de transformar a vida de uma patinha.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "E-mail",
+    "location": "Localização",
+    "location_value": "Lagoa Santa, MG",
+    "attendance": "Atendimento",
+    "attendance_value": "Via WhatsApp e Instagram",
+    "cnpj": "CNPJ",
+    "cnpj_value": "64.944.050/0001-00 | INSTITUTO MINEIRO DE PROTEÇÃO E CUIDADO ANIMAL"
+  },
+  "footer": {
+    "logo": "Patinhas para Adoção",
+    "slogan": "Toda patinha merece um lar",
+    "quick_links": "Links rápidos",
+    "contact_title": "Contato",
+    "location": "Lagoa Santa, MG",
+    "cnpj": "CNPJ: 64.944.050/0001-00",
+    "made_with": "Feito com carinho para ajudar mais patinhas a encontrarem um lar. 🐾",
+    "whatsapp_message": "Olá! Gostaria de saber mais sobre a ONG Patinhas para Adoção."
+  },
+  "status": {
+    "available": "Disponível para adoção",
+    "adopted": "Adotado(a)"
+  },
+  "specie": {
+    "dog": "Cachorro",
+    "cat": "Gato"
+  },
+  "gender": {
+    "title": "Gênero",
+    "male": "Macho",
+    "female": "Fêmea"
+  },
+  "size": {
+    "title": "Porte",
+    "small": "Porte pequeno",
+    "medium": "Porte médio",
+    "big": "Porte grande"
+  },
+  "age": {
+    "title": "Idade"
+  },
+  "date_ago": {
+    "today": "Hoje",
+    "days_ago_one": "{{count}} dia",
+    "days_ago_other": "{{count}} dias",
+    "weeks_ago_one": "{{count}} semana",
+    "weeks_ago_other": "{{count}} semanas",
+    "months_ago_one": "{{count}} mês",
+    "months_ago_other": "{{count}} meses",
+    "years_ago_one": "{{count}} ano",
+    "years_ago_other": "{{count}} anos"
+  },
+  "admin": {
+    "edit": "Editar",
+    "delete": "Excluir",
+    "delete_modal": {
+      "confirmation": "Você tem certeza que deseja excluir o cadastro de {{name}}? Esta ação não pode ser desfeita.",
+      "cancel": "Cancelar",
+      "confirm": "Confirmar Exclusão"
+    },
+    "pet_form": {
+      "title_edit": "Editar Pet",
+      "title_create": "Criar Novo Pet",
+      "label_name": "Nome",
+      "label_species": "Espécie",
+      "label_gender": "Gênero",
+      "label_age": "Idade",
+      "label_size": "Porte",
+      "label_personality": "Personalidade",
+      "label_image": "URL da Imagem",
+      "label_status": "Status",
+      "btn_save": "Salvar Alterações",
+      "btn_create": "Criar Pet",
+      "btn_cancel": "Cancelar",
+      "btn_add_new_pet": "Adicionar Novo Pet"
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "header": {
+    "logo": "Paws for Adoption",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "adoption": "Adoption",
+      "help": "How to help",
+      "stories": "Happy stories",
+      "process": "How it works",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "cta": "I want to adopt",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "hero": {
+    "badge": "Responsible adoption in BH and Region",
+    "title": "Every paw deserves a home full of love",
+    "text": "The NGO Paws for Adoption connects rescued dogs and cats to responsible families, creating new stories of care, affection, and new beginnings.",
+    "cta_primary": "See animals for adoption",
+    "cta_secondary": "I want to help",
+    "stats": {
+      "adoption": "Responsible adoption",
+      "love": "Care with love",
+      "new_beginnings": "New beginnings"
+    }
+  },
+  "about": {
+    "title": "About the NGO Paws for Adoption",
+    "subtitle": "The NGO Paws for Adoption was born to transform abandonment into hope. Our work is to welcome animals in vulnerable situations, promote essential care, and find families prepared to offer love, security, and commitment.",
+    "rescue": {
+      "title": "Rescue",
+      "text": "We welcome dogs and cats in situations of abandonment, risk, or vulnerability."
+    },
+    "care": {
+      "title": "Care",
+      "text": "We aim to offer food, protection, affection, and essential care until adoption."
+    },
+    "adoption": {
+      "title": "Responsible Adoption",
+      "text": "We connect each animal with conscious, prepared, and committed families."
+    }
+  },
+  "adoption": {
+    "title": "Animals waiting for a home",
+    "subtitle": "Meet some paws that are ready for a new story.",
+    "interest_btn": "🐾 I'm interested",
+    "search_placeholder": "Search by name...",
+    "all_species": "All species",
+    "all_genders": "All genders",
+    "all_sizes": "All sizes",
+    "find_pet": "Find pet",
+    "all_statuses": "All statuses",
+    "no_results": "No paws found with these filters. 🐾"
+  },
+  "process": {
+    "title": "How adoption works",
+    "subtitle": "Adoption is a gesture of love, but also responsibility. Therefore, we follow some steps to ensure the best for each animal.",
+    "steps": [
+      {
+        "title": "You meet the available animals",
+        "text": "See the pets waiting for a family and choose the one you connect with."
+      },
+      {
+        "title": "We talk about your routine",
+        "text": "We understand your space, routine, experience, and expectations."
+      },
+      {
+        "title": "We evaluate the match",
+        "text": "We seek to ensure the chosen pet matches your family and lifestyle."
+      },
+      {
+        "title": "We follow the adaptation",
+        "text": "We stay close in the first moments to support this new beginning."
+      }
+    ]
+  },
+  "help": {
+    "title": "How you can help",
+    "subtitle": "Not everyone can adopt, but everyone can help in some way.",
+    "btn": "I want to help",
+    "methods": [
+      {
+        "title": "Donate food or care items",
+        "description": "Your donation helps with the daily care of the sheltered animals.",
+        "message": "Hello! I would like to know how I can donate food or care items to the Paws for Adoption NGO."
+      },
+      {
+        "title": "Sponsor an animal",
+        "description": "Contribute monthly with food, vaccines, exams, or treatments.",
+        "message": "Hello! I am interested in sponsoring an animal from the Paws for Adoption NGO. How does it work?"
+      },
+      {
+        "title": "Be a temporary home",
+        "description": "Offer shelter and affection while the pet waits for definitive adoption.",
+        "message": "Hello! I would like to be a temporary home for an animal from the Paws for Adoption NGO. How can I help?"
+      },
+      {
+        "title": "Spread the word about the animals",
+        "description": "Sharing also saves lives and helps each pet find a family.",
+        "message": "Hello! I want to help by spreading the word about the animals from the Paws for Adoption NGO. How can I do this best?"
+      },
+      {
+        "title": "Be a volunteer",
+        "description": "Help at fairs, transport, photos, social media, or care.",
+        "message": "Hello! I am interested in being a volunteer at the Paws for Adoption NGO. How can I contribute?"
+      },
+      {
+        "title": "Contribute to veterinary costs",
+        "description": "Treatments, consultations, and emergencies are an important part of the rescue.",
+        "message": "Hello! I would like to contribute to veterinary costs for the animals from the Paws for Adoption NGO."
+      }
+    ]
+  },
+  "cta_banner": {
+    "title": "You can change a life today",
+    "text": "Adopting, donating, sponsoring, offering a temporary home, or spreading the word are real ways to transform an animal's future.",
+    "btn_adopt": "I want to adopt",
+    "btn_help": "I want to help"
+  },
+  "stories": {
+    "title": "Happy stories",
+    "subtitle": "Every adoption is a new beginning. Here we celebrate matches that became family.",
+    "items": [
+      {
+        "quote": "I was afraid to adopt because I had never had a dog. The Paws NGO team helped me understand what to expect and Bolinho arrived home as if he had always been ours. Today he is the joy of the family.",
+        "name": "Mariana S.",
+        "pet": "adopted Bolinho",
+        "icon": "🐶"
+      },
+      {
+        "quote": "Mel arrived scared, hiding under the bed. Three months later she is already purring in my lap. Seeing this transformation was a gift I didn't expect.",
+        "name": "Carlos R.",
+        "pet": "adopted Mel",
+        "icon": "🐱"
+      },
+      {
+        "quote": "I adopted Pipoca for my mother, who lived alone. He arrived and filled the house with life. She calls me every day to tell me what he's been up to. It was the best decision I've made.",
+        "name": "Fernanda L.",
+        "pet": "adopted Pipoca",
+        "icon": "🐕‍🦺"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "How does the adoption process work?",
+        "a": "The process starts with a conversation to understand your routine, your space, and the animal profile best suited for your family. From there, we present the available animals and evaluate the best match together."
+      },
+      {
+        "q": "Is there a cost for adoption?",
+        "a": "Adoption itself is not a sale. In some cases, a solidarity contribution may be requested to help with care costs, neutering, vaccination, or treatment. This is discussed transparently during the process."
+      },
+      {
+        "q": "Can I adopt if I live in an apartment?",
+        "a": "Yes, as long as the environment is safe, screened when necessary, and suitable for the size and behavior of the animal. We talk about this during the adoption process."
+      },
+      {
+        "q": "Are the animals neutered and vaccinated?",
+        "a": "Whenever possible, animals are sent with veterinary follow-up. Information about each pet — health, history, and needs — is shared transparently during the process."
+      },
+      {
+        "q": "How can I help without adopting?",
+        "a": "You can donate food or care items, sponsor an animal, contribute to veterinary costs, be a volunteer, offer a temporary home, or simply spread the word about the animals on your social networks."
+      },
+      {
+        "q": "How do I become a temporary home?",
+        "a": "Get in touch via WhatsApp to talk about your availability, space, and experience with animals. Temporary housing is a huge help for pets waiting for adoption."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Talk to us",
+    "subtitle": "Do you want to adopt, help, or learn more about our work?",
+    "text": "Get in touch with us. We will love to talk to you and show you ways to transform a paw's life.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "Email",
+    "location": "Location",
+    "location_value": "Lagoa Santa, MG",
+    "attendance": "Service",
+    "attendance_value": "Via WhatsApp and Instagram",
+    "cnpj": "Tax ID (CNPJ)",
+    "cnpj_value": "64.944.050/0001-00 | MINAS GERAIS INSTITUTE FOR ANIMAL PROTECTION AND CARE"
+  },
+  "footer": {
+    "logo": "Paws for Adoption",
+    "slogan": "Every paw deserves a home",
+    "quick_links": "Quick links",
+    "contact_title": "Contact",
+    "location": "Lagoa Santa, MG",
+    "cnpj": "Tax ID (CNPJ): 64.944.050/0001-00",
+    "made_with": "Made with love to help more paws find a home. 🐾",
+    "whatsapp_message": "Hello! I would like to know more about the Paws for Adoption NGO."
+  },
+  "status": {
+    "available": "available for adoption",
+    "adopted": "Adopted"
+  },
+  "specie": {
+    "dog": "Dog",
+    "cat": "Cat"
+  },
+  "gender": {
+    "title": "Gender",
+    "male": "Male",
+    "female": "Female"
+  },
+  "size": {
+    "title": "Size",
+    "small": "Small size",
+    "medium": "Medium size",
+    "big": "Big size"
+  },
+  "age": {
+    "title": "Age"
+  },
+  "date_ago": {
+    "today": "Today",
+    "days_ago_one": "{{count}} day",
+    "days_ago_other": "{{count}} days",
+    "weeks_ago_one": "{{count}} week",
+    "weeks_ago_other": "{{count}} weeks",
+    "months_ago_one": "{{count}} month",
+    "months_ago_other": "{{count}} months",
+    "years_ago_one": "{{count}} year",
+    "years_ago_other": "{{count}} years"
+  },
+  "admin": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "delete_modal": {
+      "confirmation": "Are you sure you want to delete the registration of {{name}}? This action cannot be undone.",
+      "cancel": "Cancel",
+      "confirm": "Confirm Deletion"
+    },
+    "pet_form": {
+      "title_edit": "Edit Pet",
+      "title_create": "Create New Pet",
+      "label_name": "Name",
+      "label_species": "Species",
+      "label_gender": "Gender",
+      "label_age": "Age",
+      "label_size": "Size",
+      "label_personality": "Personality",
+      "label_image": "Image URL",
+      "label_status": "Status",
+      "btn_save": "Save Changes",
+      "btn_create": "Create Pet",
+      "btn_cancel": "Cancel",
+      "btn_add_new_pet": "Add New Pet"
+    }
+  }
+}

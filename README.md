@@ -62,9 +62,9 @@ Para **remover** um animal, apague o bloco correspondente.
 Abra `script.js` e edite as constantes no início do arquivo:
 
 ```js
-const WHATSAPP = '5531986149886';        // só números, com código do país
-const INSTAGRAM = 'https://instagram.com/patinhas_para_adocao';
-const EMAIL = 'patinhasparaadocao1@gmail.com';
+const WHATSAPP = "5531986149886"; // só números, com código do país
+const INSTAGRAM = "https://instagram.com/patinhas_para_adocao";
+const EMAIL = "patinhasparaadocao1@gmail.com";
 ```
 
 ---
@@ -85,6 +85,7 @@ const EMAIL = 'patinhasparaadocao1@gmail.com';
 ## Como publicar no GitHub Pages
 
 ### Pré-requisitos
+
 - Ter uma conta no [GitHub](https://github.com)
 - Ter o Git instalado no computador (opcional — pode fazer pelo site do GitHub)
 
@@ -131,18 +132,18 @@ Acesse o painel do GoDaddy, vá em **DNS** para o domínio `patinhasparaadocao.o
 
 ### Registros tipo A (IPv4 do GitHub Pages)
 
-| Tipo | Host | Valor            | TTL  |
-|------|------|-----------------|------|
-| A    | @    | 185.199.108.153 | 1h   |
-| A    | @    | 185.199.109.153 | 1h   |
-| A    | @    | 185.199.110.153 | 1h   |
-| A    | @    | 185.199.111.153 | 1h   |
+| Tipo | Host | Valor           | TTL |
+| ---- | ---- | --------------- | --- |
+| A    | @    | 185.199.108.153 | 1h  |
+| A    | @    | 185.199.109.153 | 1h  |
+| A    | @    | 185.199.110.153 | 1h  |
+| A    | @    | 185.199.111.153 | 1h  |
 
 ### Registro tipo CNAME (para www)
 
-| Tipo  | Host | Valor                        | TTL  |
-|-------|------|------------------------------|------|
-| CNAME | www  | SEU_USUARIO_GITHUB.github.io | 1h   |
+| Tipo  | Host | Valor                        | TTL |
+| ----- | ---- | ---------------------------- | --- |
+| CNAME | www  | SEU_USUARIO_GITHUB.github.io | 1h  |
 
 > Substitua `SEU_USUARIO_GITHUB` pelo seu nome de usuário no GitHub.
 

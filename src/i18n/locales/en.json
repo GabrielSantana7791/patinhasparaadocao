@@ -11,7 +11,9 @@
       "faq": "FAQ",
       "contact": "Contact"
     },
-    "cta": "I want to adopt"
+    "cta": "I want to adopt",
+    "login": "Login",
+    "logout": "Logout"
   },
   "hero": {
     "badge": "Responsible adoption in BH and Region",
@@ -49,6 +51,7 @@
     "all_species": "All species",
     "all_genders": "All genders",
     "all_sizes": "All sizes",
+    "all_statuses": "All statuses",
     "no_results": "No paws found with these filters. 🐾"
   },
   "process": {

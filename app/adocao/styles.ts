@@ -11,6 +11,7 @@ interface HomeHeaderStyles {
   grid: CustomCSSProperties;
   noResults: CustomCSSProperties;
   addNewPetButton: CustomCSSProperties;
+  loginContainer: CustomCSSProperties;
 }
 
 export const styles: HomeHeaderStyles = {
@@ -93,4 +94,5 @@ export const styles: HomeHeaderStyles = {
     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
     transition: "transform 0.2s ease-in-out, background-color 0.2s ease-in-out",
   },
+  loginContainer: { paddingBottom: 20 },
 };

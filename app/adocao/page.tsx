@@ -7,6 +7,7 @@ import {
   PetSize,
   PetGender,
   PetType,
+  PetStatus,
 } from "@/src/firebase/collectionTypes/petType";
 import { styles } from "./styles";
 import { PetCard } from "@/src/components/petCard/PetCard";
@@ -36,6 +37,7 @@ const DonationSearchPage = () => {
   const [speciesFilter, setSpeciesFilter] = useState<string>("all");
   const [sizeFilter, setSizeFilter] = useState<string>("all");
   const [genderFilter, setGenderFilter] = useState<string>("all");
+  const [statusFilter, setStatusFilter] = useState<string>(PetStatus.available);
 
   const [selectedPet, setSelectedPet] = useState<PetType | null>(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -44,7 +46,7 @@ const DonationSearchPage = () => {
   const isAdmin = !!adminResult?.uid;
 
   useEffect(() => {
-    fetchPetsExec();
+    fetchPetsExec(1000, { status: PetStatus.available });
   }, []);
 
   useEffect(() => {
@@ -69,6 +71,7 @@ const DonationSearchPage = () => {
         specie: speciesFilter === "all" ? "" : speciesFilter,
         size: sizeFilter === "all" ? "" : sizeFilter,
         gender: genderFilter === "all" ? "" : genderFilter,
+        status: statusFilter === "all" ? "" : statusFilter,
       };
 
       fetchPetsExec(1000, filters);
@@ -77,7 +80,7 @@ const DonationSearchPage = () => {
     return () => {
       clearTimeout(handler);
     };
-  }, [searchTerm, speciesFilter, sizeFilter, genderFilter]);
+  }, [searchTerm, speciesFilter, sizeFilter, genderFilter, statusFilter]);
 
   const handleOpenEdit = useCallback((pet: PetType) => {
     setSelectedPet(pet);
@@ -146,7 +149,9 @@ const DonationSearchPage = () => {
           </>
         )}
       </header>
-      <LoginButton />
+      <div style={styles.loginContainer}>
+        <LoginButton />
+      </div>
       <section style={styles.filterBar} aria-label="Filtros de busca">
         <input
           type="text"
@@ -186,6 +191,15 @@ const DonationSearchPage = () => {
           <option value={PetSize.medium}>{t("size.medium")}</option>
           <option value={PetSize.big}>{t("size.big")}</option>
         </select>
+        <select
+          style={styles.select}
+          value={statusFilter}
+          onChange={(e) => setStatusFilter(e.target.value)}
+        >
+          <option value="all">{t("adoption.all_statuses")}</option>
+          <option value={PetStatus.available}>{t("status.available")}</option>
+          <option value={PetStatus.adopted}>{t("status.adopted")}</option>
+        </select>
       </section>
       <div style={styles.grid}>
         {petsData && petsData.pets.length > 0 ? (
@@ -204,14 +218,12 @@ const DonationSearchPage = () => {
           </div>
         )}
       </div>
-
       <FormPetModal
         isModalOpen={isEditModalOpen}
         setIsModalOpen={setIsEditModalOpen}
         selectedPet={selectedPet}
         onSubmit={handleFormSubmit}
       />
-
       <DeletePetModal
         isDeleteModalOpen={isDeleteModalOpen}
         setIsDeleteModalOpen={setIsDeleteModalOpen}

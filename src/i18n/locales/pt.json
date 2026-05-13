@@ -11,7 +11,9 @@
       "faq": "FAQ",
       "contact": "Contato"
     },
-    "cta": "Quero adotar"
+    "cta": "Quero adotar",
+    "login": "Login",
+    "logout": "Sair"
   },
   "hero": {
     "badge": "Adoção responsável em BH e Região",
@@ -49,6 +51,7 @@
     "all_species": "Todas as espécies",
     "all_genders": "Todos os gêneros",
     "all_sizes": "Todos os portes",
+    "all_statuses": "Todos os status",
     "no_results": "Nenhum amiguinho encontrado com esses filtros. 🐾"
   },
   "process": {

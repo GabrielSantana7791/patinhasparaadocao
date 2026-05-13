@@ -27,7 +27,7 @@ export const PetForm: React.FC<PetFormProps> = ({
     name: "",
     specie: PetSpecies.dog,
     gender: PetGender.male,
-    age: "",
+    age: new Date(),
     size: PetSize.medium,
     personality: "",
     image: "",
@@ -142,11 +142,20 @@ export const PetForm: React.FC<PetFormProps> = ({
             {t("admin.pet_form.label_age")}:
           </label>
           <input
-            type="text"
+            type="date"
             id="age"
             name="age"
-            value={formData.age}
-            onChange={handleChange}
+            value={
+              formData.age instanceof Date
+                ? formData.age.toISOString().split("T")[0]
+                : ""
+            }
+            onChange={(e) =>
+              setFormData((prev) => ({
+                ...prev,
+                age: new Date(e.target.value),
+              }))
+            }
             style={styles.input}
           />
         </div>

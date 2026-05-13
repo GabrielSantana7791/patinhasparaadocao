@@ -9,6 +9,7 @@ import {
   QueryDocumentSnapshot,
   DocumentData,
   getCountFromServer,
+  Timestamp,
 } from "firebase/firestore";
 import { FireBaseCollections } from "../collectionName";
 import { db } from "../../../firebase/config";
@@ -37,10 +38,13 @@ export const fetchPets = async (
 
   const lastVisible = petSnapshot.docs[petSnapshot.docs.length - 1] || null;
 
-  const pets = petSnapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...(doc.data() as Omit<PetType, "id">),
-  })) as PetType[];
+  const pets = petSnapshot.docs.map((doc) => {
+    return {
+      id: doc.id,
+      ...(doc.data() as Omit<PetType, "id">),
+      age: (doc.data() as { age: Timestamp }).age.toDate(),
+    };
+  }) as PetType[];
 
   return { pets, lastVisible, count };
 };

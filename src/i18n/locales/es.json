@@ -218,6 +218,17 @@
   "age": {
     "title": "Edad"
   },
+  "date_ago": {
+    "today": "Hoy",
+    "days_ago_one": "{{count}} día",
+    "days_ago_other": "{{count}} días",
+    "weeks_ago_one": "{{count}} semana",
+    "weeks_ago_other": "{{count}} semanas",
+    "months_ago_one": "{{count}} mes",
+    "months_ago_other": "{{count}} meses",
+    "years_ago_one": "{{count}} año",
+    "years_ago_other": "{{count}} años"
+  },
   "admin": {
     "edit": "Editar",
     "delete": "Eliminar",

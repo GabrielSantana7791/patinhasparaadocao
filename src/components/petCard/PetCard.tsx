@@ -1,6 +1,7 @@
 import { styles } from "./styles";
 import { useTranslation } from "react-i18next";
 import { PetType, PetStatus } from "@/src/firebase/collectionTypes/petType";
+import { transformDateToPetAge } from "@/src/utils/dateTranslator";
 
 type PetCardProps = {
   pet: PetType;
@@ -81,7 +82,7 @@ export const PetCard = ({ onEdit, onDelete, pet, isAdmin }: PetCardProps) => {
           <span style={styles.badge}>{t(`specie.${pet.specie}`)}</span>
           <span style={styles.badge}>{t(`gender.${pet.gender}`)}</span>
           <span style={styles.badge}>{t(`size.${pet.size}`)}</span>
-          <span style={styles.badge}>{pet.age}</span>
+          <span style={styles.badge}>{transformDateToPetAge(pet.age, t)}</span>
         </div>
         <p style={styles.personality}>{pet.personality}</p>
         <button

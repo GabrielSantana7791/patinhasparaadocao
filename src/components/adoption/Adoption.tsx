@@ -9,6 +9,7 @@ import {
   PetStatus,
 } from "@/src/firebase/collectionTypes/petType";
 import { useFetchPets } from "@/src/hooks/firebase";
+import { transformDateToPetAge } from "@/src/utils/dateTranslator";
 
 const WHATSAPP_NUMBER = "5531986149886";
 const getWhatsappUrl = (petName: string, sexo: string) => {
@@ -114,7 +115,9 @@ const Adoption: React.FC = () => {
                       <span style={styles.metaItem}>
                         {t(`gender.${pet.gender}`)}
                       </span>
-                      <span style={styles.metaItem}>{pet.age}</span>
+                      <span style={styles.metaItem}>
+                        {transformDateToPetAge(pet.age, t)}
+                      </span>
                       <span style={styles.metaItem}>
                         {t(`size.${pet.size}`)}
                       </span>

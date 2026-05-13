@@ -23,7 +23,7 @@ export type PetType = {
   name: string;
   specie: PetSpecies;
   gender: PetGender;
-  age: string;
+  age: Date;
   size: PetSize;
   personality: string;
   image: string;

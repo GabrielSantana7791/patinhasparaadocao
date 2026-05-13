@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { PetType } from "@/src/firebase/collectionTypes/petType";
 import { styles } from "./styles";
+import { transformDateToPetAge } from "@/src/utils/dateTranslator";
 
 interface PetCardProps {
   pet: PetType;
@@ -49,7 +50,9 @@ const PetCard: React.FC<PetCardProps> = ({ pet }) => {
           </div>
           <div style={styles.attributeBox}>
             <span style={styles.attributeLabel}>{t("age.title")}</span>
-            <span style={styles.attributeValue}>{pet.age}</span>
+            <span style={styles.attributeValue}>
+              {transformDateToPetAge(pet.age, t)}
+            </span>
           </div>
           <div style={styles.attributeBox}>
             <span style={styles.attributeLabel}>{t("size.title")}</span>

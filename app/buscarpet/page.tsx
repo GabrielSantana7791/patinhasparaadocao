@@ -55,9 +55,7 @@ const DonationSearchPage = () => {
   }, []);
 
   useEffect(() => {
-    if (!user) return;
-
-    fetchAdminByEmail(user.uid);
+    fetchAdminByEmail(user?.uid);
   }, [user]);
 
   useEffect(() => {

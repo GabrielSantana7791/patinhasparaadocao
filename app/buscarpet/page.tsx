@@ -22,13 +22,18 @@ import {
 } from "@/src/hooks/firebase";
 import { LoginButton } from "@/src/components/auth/LoginButton";
 import { useGetUserAuth } from "@/src/hooks/firebase/auth/useUserAuth";
+import Loading from "@/src/components/loading/Loading";
 
 const DonationSearchPage = () => {
   const { t } = useTranslation();
 
   const { data: createPetData, exec: createPetExec } = useCreatePet();
   const { exec: updatePetExec } = useUpdatePet();
-  const { data: petsData, exec: fetchPetsExec } = useFetchPets();
+  const {
+    data: petsData,
+    isLoading: isFetchLoading,
+    exec: fetchPetsExec,
+  } = useFetchPets();
   const { exec: deletePetExec } = useDeletePet();
   const user = useGetUserAuth();
   const { data: adminResult, exec: fetchAdminByEmail } = useFetchAdminByEmail();
@@ -201,8 +206,19 @@ const DonationSearchPage = () => {
           <option value={PetStatus.adopted}>{t("status.adopted")}</option>
         </select>
       </section>
+      {isFetchLoading && !petsData && (
+        <div>
+          <Loading />
+        </div>
+      )}
+      {!isFetchLoading && petsData && petsData.count === 0 && (
+        <div style={styles.noResults}>
+          <p style={{ fontSize: "1.2rem" }}>{t("adoption.no_results")}</p>
+        </div>
+      )}
       <div style={styles.grid}>
-        {petsData && petsData.pets.length > 0 ? (
+        {petsData &&
+          petsData.pets.length > 0 &&
           petsData.pets.map((pet) => (
             <PetCard
               key={pet.id}
@@ -211,12 +227,7 @@ const DonationSearchPage = () => {
               onDelete={handleOpenDelete}
               isAdmin={isAdmin}
             />
-          ))
-        ) : (
-          <div style={styles.noResults}>
-            <p style={{ fontSize: "1.2rem" }}>{t("adoption.no_results")}</p>
-          </div>
-        )}
+          ))}
       </div>
       <FormPetModal
         isModalOpen={isEditModalOpen}

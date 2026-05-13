@@ -19,13 +19,14 @@ const HomeHeader = () => {
   }, []);
 
   const navLinks = [
-    { id: "inicio", label: t("header.nav.home") },
-    { id: "sobre", label: t("header.nav.about") },
-    { id: "adocao", label: t("header.nav.adoption") },
-    { id: "ajudar", label: t("header.nav.help") },
-    { id: "historias", label: t("header.nav.stories") },
-    { id: "faq", label: t("header.nav.faq") },
-    { id: "contato", label: t("header.nav.contact") },
+    { id: "#inicio", label: t("header.nav.home") },
+    { id: "#sobre", label: t("header.nav.about") },
+    { id: "#adocao", label: t("header.nav.adoption") },
+    { id: "buscarpet", label: t("adoption.find_pet") },
+    { id: "#ajudar", label: t("header.nav.help") },
+    { id: "#historias", label: t("header.nav.stories") },
+    { id: "#faq", label: t("header.nav.faq") },
+    { id: "#contato", label: t("header.nav.contact") },
   ];
 
   return (
@@ -64,7 +65,7 @@ const HomeHeader = () => {
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
-                  href={`/#${link.id}`}
+                  href={`/${link.id}`}
                   style={styles.navLink(hoveredLink === link.id)}
                   onMouseEnter={() => setHoveredLink(link.id)}
                   onMouseLeave={() => setHoveredLink(null)}

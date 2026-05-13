@@ -3,7 +3,11 @@
 import React, { useEffect, useState } from "react";
 import { styles } from "./styles";
 import { useTranslation } from "react-i18next";
-import { PetGender, PetSpecies, PetStatus } from "@/src/pet/petType";
+import {
+  PetGender,
+  PetSpecies,
+  PetStatus,
+} from "@/src/firebase/collectionTypes/petType";
 import { useFetchPets } from "@/src/hooks/firebase";
 
 const WHATSAPP_NUMBER = "5531986149886";

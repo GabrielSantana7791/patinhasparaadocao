@@ -1,4 +1,4 @@
-import { PetType } from "@/src/pet/petType";
+import { PetType } from "@/src/firebase/collectionTypes/petType";
 import {
   collection,
   getDocs,

@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import { PetType } from "@/src/pet/petType";
+import { PetType } from "@/src/firebase/collectionTypes/petType";
 import { styles } from "./styles";
 
 interface PetCardProps {

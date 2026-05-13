@@ -2,7 +2,12 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { PetSpecies, PetSize, PetGender, PetType } from "@/src/pet/petType";
+import {
+  PetSpecies,
+  PetSize,
+  PetGender,
+  PetType,
+} from "@/src/firebase/collectionTypes/petType";
 import { styles } from "./styles";
 import { PetCard } from "@/src/components/petCard/PetCard";
 import { DeletePetModal } from "@/src/components/modal/deletePetModal/DeletePetModal";
@@ -10,19 +15,22 @@ import { FormPetModal } from "@/src/components/modal/formPetModal/FormPetModal";
 import {
   useCreatePet,
   useDeletePet,
+  useFetchAdminByEmail,
   useFetchPets,
   useUpdatePet,
 } from "@/src/hooks/firebase";
+import { LoginButton } from "@/src/components/auth/LoginButton";
+import { useGetUserAuth } from "@/src/hooks/firebase/auth/useUserAuth";
 
 const DonationSearchPage = () => {
   const { t } = useTranslation();
-
-  const isAdmin = true;
 
   const { data: createPetData, exec: createPetExec } = useCreatePet();
   const { exec: updatePetExec } = useUpdatePet();
   const { data: petsData, exec: fetchPetsExec } = useFetchPets();
   const { exec: deletePetExec } = useDeletePet();
+  const user = useGetUserAuth();
+  const { data: adminResult, exec: fetchAdminByEmail } = useFetchAdminByEmail();
 
   const [searchTerm, setSearchTerm] = useState("");
   const [speciesFilter, setSpeciesFilter] = useState<string>("all");
@@ -33,9 +41,17 @@ const DonationSearchPage = () => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
+  const isAdmin = !!adminResult?.email;
+
   useEffect(() => {
     fetchPetsExec();
   }, []);
+
+  useEffect(() => {
+    if (!user) return;
+
+    fetchAdminByEmail(user.email);
+  }, [user]);
 
   useEffect(() => {
     if (!createPetData) return;
@@ -124,7 +140,7 @@ const DonationSearchPage = () => {
           </>
         )}
       </header>
-
+      <LoginButton />
       <section style={styles.filterBar} aria-label="Filtros de busca">
         <input
           type="text"

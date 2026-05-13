@@ -6,7 +6,7 @@ import {
   PetSpecies,
   PetStatus,
   PetType,
-} from "@/src/pet/petType";
+} from "@/src/firebase/collectionTypes/petType";
 import { useTranslation } from "react-i18next";
 
 interface PetFormProps {

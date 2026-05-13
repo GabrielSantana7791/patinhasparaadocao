@@ -4,7 +4,7 @@ import {
   PetSpecies,
   PetGender,
   PetSize,
-} from "../pet/petType";
+} from "../firebase/collectionTypes/petType";
 
 export const PET_LIST_EXAMPLE: PetType[] = [
   {

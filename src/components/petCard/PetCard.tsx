@@ -1,6 +1,6 @@
 import { styles } from "./styles";
 import { useTranslation } from "react-i18next";
-import { PetType, PetStatus } from "@/src/pet/petType";
+import { PetType, PetStatus } from "@/src/firebase/collectionTypes/petType";
 
 type PetCardProps = {
   pet: PetType;

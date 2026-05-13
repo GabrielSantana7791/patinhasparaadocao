@@ -1,4 +1,4 @@
-import { PetType } from "@/src/pet/petType";
+import { PetType } from "@/src/firebase/collectionTypes/petType";
 import { Modal } from "../Modal";
 import { useTranslation } from "react-i18next";
 import { styles } from "./styles";

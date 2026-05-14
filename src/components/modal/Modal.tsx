@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { styles } from "./styles";
 
 export interface ModalProps {
@@ -9,10 +9,29 @@ export interface ModalProps {
 }
 
 export const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
+  const mouseDownTarget = useRef<EventTarget | null>(null);
+
   if (!isOpen) return null;
 
+  const handleMouseDown = (e: React.MouseEvent) => {
+    mouseDownTarget.current = e.target;
+  };
+
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    if (
+      mouseDownTarget.current === e.currentTarget &&
+      e.target === e.currentTarget
+    ) {
+      onClose();
+    }
+  };
+
   return (
-    <div style={styles.overlay} onClick={onClose}>
+    <div
+      style={styles.overlay}
+      onMouseDown={handleMouseDown}
+      onClick={handleOverlayClick}
+    >
       <div style={styles.content} onClick={(e) => e.stopPropagation()}>
         <header style={styles.header}>
           <h2 style={styles.title}>{title}</h2>

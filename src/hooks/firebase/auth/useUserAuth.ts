@@ -2,7 +2,6 @@
 
 import { auth } from "@/src/firebase/config";
 import {
-  getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithPopup,
@@ -12,7 +11,6 @@ import { useEffect, useState } from "react";
 
 export function useGetUserAuth() {
   const [user, setUser] = useState<User | null>(null);
-  const auth = getAuth();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {

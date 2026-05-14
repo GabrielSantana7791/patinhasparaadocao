@@ -9,18 +9,11 @@ import {
 import { styles } from "./styles";
 import { transformDateToPetAge } from "@/src/utils/dateTranslator";
 import React, { useState } from "react";
+import { getWhatsappUrlForAdoption } from "@/src/utils/whatsapp/getWhatsappUrl";
 
 interface PetCardProps {
   pet: PetType;
 }
-
-const WHATSAPP_NUMBER = "5531986149886";
-const getWhatsappUrl = (petName: string, sexo: string) => {
-  const msg = `Olá! Tenho interesse em saber mais sobre a adoção d${
-    sexo === "Fêmea" ? "a" : "o"
-  } ${petName}.`;
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-};
 
 const HomePetCard: React.FC<PetCardProps> = ({ pet }) => {
   const { t } = useTranslation();
@@ -91,7 +84,7 @@ const HomePetCard: React.FC<PetCardProps> = ({ pet }) => {
           <p style={styles.personality}>"{pet.personality}"</p>
         </div>
         <a
-          href={getWhatsappUrl(pet.name, pet.gender)}
+          href={getWhatsappUrlForAdoption(pet.name, pet.gender)}
           style={styles.cardBtn(isBtnHovered)}
           onMouseEnter={() => setIsBtnHovered(true)}
           onMouseLeave={() => setIsBtnHovered(false)}

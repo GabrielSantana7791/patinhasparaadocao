@@ -3,17 +3,17 @@
 import { useState } from "react";
 import { styles } from "./styles";
 import { useTranslation } from "react-i18next";
-
-const WHATSAPP_NUMBER = "5531986149886";
-const INSTAGRAM_URL = "https://instagram.com/patinhas_para_adocao";
-const CONTACT_EMAIL = "patinhasparaadocao1@gmail.com";
+import { CONTACT_EMAIL, INSTAGRAM_URL } from "@/src/utils/contacts/contacts";
+import { getWhatsappUrlForContact } from "@/src/utils/whatsapp/getWhatsappUrl";
 
 const Footer = () => {
   const { t } = useTranslation();
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
-  const WHATSAPP_CONTACT_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t("footer.whatsapp_message"))}`;
   const EMAIL_URL = `mailto:${CONTACT_EMAIL}`;
+  const WHATSAPP_CONTACT_URL = getWhatsappUrlForContact(
+    t("footer.whatsapp_message"),
+  );
 
   const links = [
     { id: "sobre", label: t("header.nav.about") },

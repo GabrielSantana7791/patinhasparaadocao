@@ -2,6 +2,7 @@ import { styles } from "./styles";
 import { useTranslation } from "react-i18next";
 import { PetType, PetStatus } from "@/src/firebase/collectionTypes/petType";
 import { transformDateToPetAge } from "@/src/utils/dateTranslator";
+import { getWhatsappUrlForAdoption } from "@/src/utils/whatsapp/getWhatsappUrl";
 
 type PetCardProps = {
   pet: PetType;
@@ -21,6 +22,13 @@ export const PetCard = ({ onEdit, onDelete, pet, isAdmin }: PetCardProps) => {
 
   const handleDelete = () => {
     onDelete(pet);
+  };
+
+  const handleAdopt = () => {
+    if (!isAvailable) return;
+
+    const url = getWhatsappUrlForAdoption(pet.name, pet.gender);
+    window.open(url, "_blank");
   };
 
   return (
@@ -87,6 +95,7 @@ export const PetCard = ({ onEdit, onDelete, pet, isAdmin }: PetCardProps) => {
         <p style={styles.personality}>{pet.personality}</p>
         <button
           disabled={!isAvailable}
+          onClick={handleAdopt}
           style={{
             ...styles.button,
             backgroundColor: isAvailable ? "#E91E63" : "#BDBDBD",

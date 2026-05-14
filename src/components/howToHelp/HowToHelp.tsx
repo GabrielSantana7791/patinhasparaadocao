@@ -3,11 +3,7 @@
 import { useState, useEffect } from "react";
 import { styles } from "./styles";
 import { useTranslation } from "react-i18next";
-
-const WHATSAPP_NUMBER = "5531986149886";
-const getWhatsappUrl = (msg: string) => {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-};
+import { getWhatsappUrlForContact } from "@/src/utils/whatsapp/getWhatsappUrl";
 
 const HowToHelp = () => {
   const { t } = useTranslation();
@@ -24,40 +20,40 @@ const HowToHelp = () => {
 
   const helpMethods = [
     {
-      icone: "🍖",
-      titulo: t("help.methods.0.title"),
-      descricao: t("help.methods.0.description"),
-      mensagem: t("help.methods.0.message"),
+      icon: "🍖",
+      title: t("help.methods.0.title"),
+      description: t("help.methods.0.description"),
+      message: t("help.methods.0.message"),
     },
     {
-      icone: "💛",
-      titulo: t("help.methods.1.title"),
-      descricao: t("help.methods.1.description"),
-      mensagem: t("help.methods.1.message"),
+      icon: "💛",
+      title: t("help.methods.1.title"),
+      description: t("help.methods.1.description"),
+      message: t("help.methods.1.message"),
     },
     {
-      icone: "🏠",
-      titulo: t("help.methods.2.title"),
-      descricao: t("help.methods.2.description"),
-      mensagem: t("help.methods.2.message"),
+      icon: "🏠",
+      title: t("help.methods.2.title"),
+      description: t("help.methods.2.description"),
+      message: t("help.methods.2.message"),
     },
     {
-      icone: "📲",
-      titulo: t("help.methods.3.title"),
-      descricao: t("help.methods.3.description"),
-      mensagem: t("help.methods.3.message"),
+      icon: "📲",
+      title: t("help.methods.3.title"),
+      description: t("help.methods.3.description"),
+      message: t("help.methods.3.message"),
     },
     {
-      icone: "🤝",
-      titulo: t("help.methods.4.title"),
-      descricao: t("help.methods.4.description"),
-      mensagem: t("help.methods.4.message"),
+      icon: "🤝",
+      title: t("help.methods.4.title"),
+      description: t("help.methods.4.description"),
+      message: t("help.methods.4.message"),
     },
     {
-      icone: "🩺",
-      titulo: t("help.methods.5.title"),
-      descricao: t("help.methods.5.description"),
-      mensagem: t("help.methods.5.message"),
+      icon: "🩺",
+      title: t("help.methods.5.title"),
+      description: t("help.methods.5.description"),
+      message: t("help.methods.5.message"),
     },
   ];
 
@@ -80,18 +76,18 @@ const HowToHelp = () => {
               role="listitem"
             >
               <div style={styles.cardIcon} aria-hidden="true">
-                {method.icone}
+                {method.icon}
               </div>
-              <h3 style={styles.cardTitle}>{method.titulo}</h3>
-              <p style={styles.cardText}>{method.descricao}</p>
+              <h3 style={styles.cardTitle}>{method.title}</h3>
+              <p style={styles.cardText}>{method.description}</p>
               <a
-                href={getWhatsappUrl(method.mensagem)}
+                href={getWhatsappUrlForContact(method.message)}
                 style={styles.cardBtn(hoveredBtnIndex === index)}
                 onMouseEnter={() => setHoveredBtnIndex(index)}
                 onMouseLeave={() => setHoveredBtnIndex(null)}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`${method.titulo} — abrir WhatsApp`}
+                aria-label={`${method.title} — abrir WhatsApp`}
               >
                 {t("help.btn")}
               </a>

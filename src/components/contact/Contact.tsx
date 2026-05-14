@@ -3,13 +3,12 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { styles } from "./styles";
+import { CONTACT_EMAIL, INSTAGRAM_URL } from "@/src/utils/contacts/contacts";
+import { getWhatsappUrlForContact } from "@/src/utils/whatsapp/getWhatsappUrl";
 
-const WHATSAPP_NUMBER = "5531986149886";
-const INSTAGRAM_URL = "https://instagram.com/patinhas_para_adocao";
-const CONTACT_EMAIL = "patinhasparaadocao1@gmail.com";
-const WHATSAPP_CONTACT_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+const WHATSAPP_CONTACT_URL = getWhatsappUrlForContact(
   "Olá! Gostaria de saber mais sobre a ONG Patinhas para Adoção.",
-)}`;
+);
 const EMAIL_URL = `mailto:${CONTACT_EMAIL}`;
 
 const Contact = () => {

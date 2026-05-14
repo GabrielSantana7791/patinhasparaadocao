@@ -21,6 +21,8 @@ export const PetForm: React.FC<PetFormProps> = ({
   onCancel,
 }) => {
   const { t } = useTranslation();
+  const [isHoveredSubmit, setIsHoveredSubmit] = useState(false);
+  const [isHoveredCancel, setIsHoveredCancel] = useState(false);
 
   const [formData, setFormData] = useState<PetType>({
     id: "",
@@ -56,6 +58,19 @@ export const PetForm: React.FC<PetFormProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSubmit(formData);
+  };
+
+  const submitButtonStyle: React.CSSProperties = {
+    ...styles.submitButton,
+    backgroundColor: isHoveredSubmit ? "#388E3C" : "#4CAF50",
+    boxShadow: isHoveredSubmit
+      ? "0 4px 12px rgba(76, 175, 80, 0.3)"
+      : "0 2px 4px rgba(0,0,0,0.1)",
+  };
+
+  const cancelButtonStyle: React.CSSProperties = {
+    ...styles.cancelButton,
+    backgroundColor: isHoveredCancel ? "#f5f5f5" : "transparent",
   };
 
   const title = initialData
@@ -233,12 +248,23 @@ export const PetForm: React.FC<PetFormProps> = ({
         </div>
 
         <div style={styles.buttonGroup}>
-          <button type="submit" style={styles.submitButton}>
+          <button
+            type="submit"
+            style={submitButtonStyle}
+            onMouseEnter={() => setIsHoveredSubmit(true)}
+            onMouseLeave={() => setIsHoveredSubmit(false)}
+          >
             {initialData
               ? t("admin.pet_form.btn_save")
               : t("admin.pet_form.btn_create")}
           </button>
-          <button type="button" onClick={onCancel} style={styles.cancelButton}>
+          <button
+            type="button"
+            onClick={onCancel}
+            style={cancelButtonStyle}
+            onMouseEnter={() => setIsHoveredCancel(true)}
+            onMouseLeave={() => setIsHoveredCancel(false)}
+          >
             {t("admin.pet_form.btn_cancel")}
           </button>
         </div>

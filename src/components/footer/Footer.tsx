@@ -5,6 +5,7 @@ import { styles } from "./styles";
 import { useTranslation } from "react-i18next";
 import { CONTACT_EMAIL, INSTAGRAM_URL } from "@/src/utils/contacts/contacts";
 import { getWhatsappUrlForContact } from "@/src/utils/whatsapp/getWhatsappUrl";
+import { NAV_LINKS } from "@/src/utils/navLinks";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -15,15 +16,8 @@ const Footer = () => {
     t("footer.whatsapp_message"),
   );
 
-  const links = [
-    { id: "sobre", label: t("header.nav.about") },
-    { id: "adocao", label: t("header.nav.adoption") },
-    { id: "processo", label: t("header.nav.process") },
-    { id: "ajudar", label: t("header.nav.help") },
-    { id: "historias", label: t("header.nav.stories") },
-    { id: "faq", label: t("header.nav.faq") },
-    { id: "contato", label: t("header.nav.contact") },
-  ];
+  const _navLinks = { ...NAV_LINKS };
+  delete _navLinks[0];
 
   return (
     <footer style={styles.footer} role="contentinfo">
@@ -53,15 +47,15 @@ const Footer = () => {
         <nav aria-label={t("footer.quick_links")}>
           <h3 style={styles.navTitle}>{t("footer.quick_links")}</h3>
           <ul style={styles.linkList} role="list">
-            {links.map((link) => (
+            {NAV_LINKS.map((link) => (
               <li key={link.id}>
                 <a
-                  href={`/#${link.id}`}
+                  href={`/${link.id}`}
                   style={styles.link(hoveredLink === link.id)}
                   onMouseEnter={() => setHoveredLink(link.id)}
                   onMouseLeave={() => setHoveredLink(null)}
                 >
-                  {link.label}
+                  {t(link.label)}
                 </a>
               </li>
             ))}

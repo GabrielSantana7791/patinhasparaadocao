@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { styles } from "./styles";
 import { useTranslation } from "react-i18next";
+import { NAV_LINKS } from "@/src/utils/navLinks";
 
 const HomeHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,17 +18,6 @@ const HomeHeader = () => {
     window.addEventListener("resize", checkWidth);
     return () => window.removeEventListener("resize", checkWidth);
   }, []);
-
-  const navLinks = [
-    { id: "#inicio", label: t("header.nav.home") },
-    { id: "#sobre", label: t("header.nav.about") },
-    { id: "#adocao", label: t("header.nav.adoption") },
-    { id: "buscarpet", label: t("adoption.find_pet") },
-    { id: "#ajudar", label: t("header.nav.help") },
-    { id: "#historias", label: t("header.nav.stories") },
-    { id: "#faq", label: t("header.nav.faq") },
-    { id: "#contato", label: t("header.nav.contact") },
-  ];
 
   return (
     <header style={styles.header} role="banner">
@@ -62,7 +52,7 @@ const HomeHeader = () => {
           aria-label="Menu principal"
         >
           <ul style={styles.navList(isMobile)} role="list">
-            {navLinks.map((link) => (
+            {NAV_LINKS.map((link) => (
               <li key={link.id}>
                 <a
                   href={`/${link.id}`}
@@ -71,7 +61,7 @@ const HomeHeader = () => {
                   onMouseLeave={() => setHoveredLink(null)}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {link.label}
+                  {t(link.label)}
                 </a>
               </li>
             ))}

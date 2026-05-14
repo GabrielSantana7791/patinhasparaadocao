@@ -23,6 +23,34 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.png",
   },
+  openGraph: {
+    title: "Patinhas para Adoção | Toda patinha merece um lar",
+    description:
+      "A ONG Patinhas para Adoção conecta cães e gatos resgatados a famílias responsáveis em BH e Região.",
+    url: "https://www.patinhasparaadocao.org",
+    siteName: "Patinhas para Adoção",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Logo Patinhas para Adoção",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Patinhas para Adoção | Toda patinha merece um lar",
+    description:
+      "Conectando cães e gatos resgatados a famílias responsáveis em BH e Região.",
+    images: ["/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const styles = {

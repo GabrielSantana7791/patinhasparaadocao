@@ -30,7 +30,7 @@ export const styles: FooterStyles = {
     padding: "0 1.25rem",
     display: "flex",
     flexWrap: "wrap" as const,
-    gap: "2.5rem",
+    gap: "clamp(2rem, 10vw, 15rem)",
     justifyContent: "space-between",
   },
   column: {

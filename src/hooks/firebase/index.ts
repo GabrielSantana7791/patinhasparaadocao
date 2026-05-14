@@ -7,4 +7,4 @@ export const useCreatePet = () => useApi(createPet);
 export const useUpdatePet = () => useApi(updatePet);
 export const useDeletePet = () => useApi(deletePet);
 
-export const useFetchAdminByEmail = () => useApi(fetchAdmin);
+export const useFetchAdminByUserId = () => useApi(fetchAdmin);

@@ -197,6 +197,7 @@ export const PetForm: React.FC<PetFormProps> = ({
             {t("admin.pet_form.label_personality")}:
           </label>
           <textarea
+            required
             id="personality"
             name="personality"
             value={formData.personality}
@@ -210,6 +211,7 @@ export const PetForm: React.FC<PetFormProps> = ({
             {t("admin.pet_form.label_image")}:
           </label>
           <input
+            required
             type="text"
             id="image"
             name="image"

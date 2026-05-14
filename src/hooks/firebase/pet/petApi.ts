@@ -1,4 +1,7 @@
-import { PetType } from "@/src/firebase/collectionTypes/petType";
+import {
+  FirebasePetType,
+  PetType,
+} from "@/src/firebase/collectionTypes/petType";
 import {
   collection,
   getDocs,
@@ -9,14 +12,14 @@ import {
   QueryDocumentSnapshot,
   DocumentData,
   getCountFromServer,
-  Timestamp,
 } from "firebase/firestore";
 import { FireBaseCollections } from "../collectionName";
 import { db } from "../../../firebase/config";
 import { getFilteredQueryAndConstraints } from "@/src/firebase/getFilteredQueryAndConstraints";
+import { sanitizeFilters } from "../utils/sanitizeFilters";
 
 export const fetchPets = async (
-  pageSize: number = 1000,
+  pageSize: number = 50,
   filters?: Partial<PetType>,
   lastVisibleDoc?: QueryDocumentSnapshot<DocumentData>,
 ): Promise<{
@@ -25,10 +28,11 @@ export const fetchPets = async (
   count: number;
 }> => {
   const petsCollection = collection(db, FireBaseCollections.pet);
+  const filtersSanitized = filters ? sanitizeFilters(filters, ["name"]) : [];
 
   const { query } = getFilteredQueryAndConstraints({
     collectionReference: petsCollection,
-    filters,
+    filters: filtersSanitized,
     lastVisibleDoc,
     pageSize,
   });
@@ -38,15 +42,21 @@ export const fetchPets = async (
 
   const lastVisible = petSnapshot.docs[petSnapshot.docs.length - 1] || null;
 
-  const pets = petSnapshot.docs.map((doc) => {
+  const pets: PetType[] = petSnapshot.docs.map((doc): PetType => {
+    const firebaseData = doc.data() as FirebasePetType;
+
     return {
       id: doc.id,
-      ...(doc.data() as Omit<PetType, "id">),
-      age: (doc.data() as { age: Timestamp }).age.toDate(),
+      ...firebaseData,
+      age: firebaseData.age.toDate(),
     };
-  }) as PetType[];
+  });
 
-  return { pets, lastVisible, count };
+  const filteredPets = pets.filter((pet) =>
+    pet.name.toLowerCase().includes(filters?.name?.toLowerCase() ?? ""),
+  );
+
+  return { pets: filteredPets, lastVisible, count };
 };
 
 export const createPet = async ({

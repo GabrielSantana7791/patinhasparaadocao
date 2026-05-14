@@ -1,3 +1,5 @@
+import { Timestamp } from "firebase/firestore";
+
 export enum PetStatus {
   available = "available",
   adopted = "adopted",
@@ -29,4 +31,8 @@ export type PetType = {
   image: string;
   id: string;
   status: PetStatus;
+};
+
+export type FirebasePetType = Omit<PetType, "id" | "age"> & {
+  age: Timestamp;
 };

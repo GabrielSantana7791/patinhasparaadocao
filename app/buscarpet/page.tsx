@@ -16,7 +16,7 @@ import { FormPetModal } from "@/src/components/modal/formPetModal/FormPetModal";
 import {
   useCreatePet,
   useDeletePet,
-  useFetchAdminByEmail,
+  useFetchAdminByUserId,
   useFetchPets,
   useUpdatePet,
 } from "@/src/hooks/firebase";
@@ -36,7 +36,8 @@ const DonationSearchPage = () => {
   } = useFetchPets();
   const { exec: deletePetExec } = useDeletePet();
   const user = useGetUserAuth();
-  const { data: adminResult, exec: fetchAdminByEmail } = useFetchAdminByEmail();
+  const { data: adminResult, exec: fetchAdminByUserId } =
+    useFetchAdminByUserId();
 
   const [searchTerm, setSearchTerm] = useState("");
   const [speciesFilter, setSpeciesFilter] = useState<string>("all");
@@ -55,7 +56,7 @@ const DonationSearchPage = () => {
   }, []);
 
   useEffect(() => {
-    fetchAdminByEmail(user?.uid);
+    fetchAdminByUserId(user?.uid);
   }, [user]);
 
   useEffect(() => {

@@ -42,7 +42,7 @@ const DonationSearchPage = () => {
   const [speciesFilter, setSpeciesFilter] = useState<string>("all");
   const [sizeFilter, setSizeFilter] = useState<string>("all");
   const [genderFilter, setGenderFilter] = useState<string>("all");
-  const [statusFilter, setStatusFilter] = useState<string>(PetStatus.available);
+  const [statusFilter, setStatusFilter] = useState<string>("all");
 
   const [selectedPet, setSelectedPet] = useState<PetType | null>(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -51,7 +51,7 @@ const DonationSearchPage = () => {
   const isAdmin = !!adminResult?.uid;
 
   useEffect(() => {
-    fetchPetsExec(1000, { status: PetStatus.available });
+    fetchPetsExec(1000);
   }, []);
 
   useEffect(() => {

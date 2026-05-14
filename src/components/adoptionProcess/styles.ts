@@ -44,7 +44,7 @@ export const styles: AdoptionProcessStyles = {
   },
   grid: (isMobile) => ({
     display: "grid",
-    gridTemplateColumns: isMobile ? "1fr" : "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
     gap: "2.5rem",
     listStyle: "none",
     padding: 0,

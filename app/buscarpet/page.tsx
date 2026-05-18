@@ -70,12 +70,15 @@ const DonationSearchPage = () => {
 
   useEffect(() => {
     const handler = setTimeout(() => {
-      const filters = {
+      const filters: Partial<PetType> = {
         name: searchTerm,
-        specie: speciesFilter === "all" ? "" : speciesFilter,
-        size: sizeFilter === "all" ? "" : sizeFilter,
-        gender: genderFilter === "all" ? "" : genderFilter,
-        status: statusFilter === "all" ? "" : statusFilter,
+        specie:
+          speciesFilter === "all" ? undefined : (speciesFilter as PetSpecies),
+        size: sizeFilter === "all" ? undefined : (sizeFilter as PetSize),
+        gender:
+          genderFilter === "all" ? undefined : (genderFilter as PetGender),
+        status:
+          statusFilter === "all" ? undefined : (statusFilter as PetStatus),
       };
 
       fetchPetsExec(1000, filters);

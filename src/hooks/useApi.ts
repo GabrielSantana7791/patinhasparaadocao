@@ -1,18 +1,20 @@
 import { useState } from "react";
 
-interface UseApi<T> {
+interface UseApi<T, P extends any[]> {
   data: T | null;
   isLoading: boolean;
   error: Error | null;
-  exec: (...args: any[]) => Promise<T | undefined>;
+  exec: (...args: P) => Promise<T | undefined>;
 }
 
-const useApi = <T>(apiFunc: (...args: any[]) => Promise<T>): UseApi<T> => {
+const useApi = <T, P extends any[]>(
+  apiFunc: (...args: P) => Promise<T>,
+): UseApi<T, P> => {
   const [data, setData] = useState<T | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
-  const exec = async (...args: any[]): Promise<T | undefined> => {
+  const exec = async (...args: P): Promise<T | undefined> => {
     setIsLoading(true);
     setError(null);
     try {

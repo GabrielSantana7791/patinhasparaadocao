@@ -4,7 +4,7 @@ import { FireBaseCollections } from "../collectionName";
 import { AdminType } from "@/src/firebase/collectionTypes/adminType";
 
 export const fetchAdmin = async (
-  uid: string | null,
+  uid: string | null | undefined,
 ): Promise<AdminType | null> => {
   if (!uid) return null;
 

@@ -26,6 +26,7 @@ const Hero = () => {
           </h1>
           <p style={styles.text}>{t("hero.text")}</p>
           <div style={styles.actions}>
+            Dani
             <a
               href="#adocao"
               style={styles.btnOrange(hoveredBtn === "adocao")}
